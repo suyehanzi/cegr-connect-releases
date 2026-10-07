@@ -4,43 +4,47 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>0.5.20</title>
-            <pubDate>Wed, 07 Oct 2026 17:03:40 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.20</link>
+            <title>0.5.21</title>
+            <pubDate>Wed, 07 Oct 2026 18:23:31 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.21</link>
             <sparkle:informationalUpdate></sparkle:informationalUpdate>
-            <sparkle:version>39</sparkle:version>
-            <sparkle:shortVersionString>0.5.20</sparkle:shortVersionString>
+            <sparkle:version>40</sparkle:version>
+            <sparkle:shortVersionString>0.5.21</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[橙格 · AI 环境助手 **0.5.20 内测版**，macOS 和 Windows 使用同一版本号。后续正式版计划为 **v1.0.1**，完成验收后再发布。
+            <description sparkle:format="markdown"><![CDATA[橙格 · AI 环境助手 **0.5.21 内测版**。macOS 与 Windows 使用同一版本号，后续正式版目标为 **v1.0.1**。
 
-### 下载和安装
+### 本次修复
 
-- **Mac（Apple 芯片，macOS 14 或更新）**：下载 `CEGR-AI-Assistant-v0.5.20-for-macOS-arm64.zip`，解压后退出旧版，将应用复制到「应用程序」覆盖安装。已完成 Developer ID 签名和 Apple 公证。
-- **Windows x64**：下载 `CEGR-AI-Assistant-v0.5.20-for-Windows-10-11-x64-Setup.exe`，退出旧版后运行安装器。安装身份和本地数据目录保持不变。
-- 使用下方 `Assets` 中的对应文件；GitHub 自动生成的 `Source code` 不是安装包。
+- Mac：补齐应用保护扩展必需的用途说明，修复打包后的执行权限，解决已确认的扩展包校验问题。新包已重新完成 Developer ID 签名和 Apple 公证。
+- Mac：区分“等待系统授权”与“系统拒绝组件”，在开始使用和本机状态中显示明确提示及可复制/选择的错误代码，避免反复授权。
+- Mac：将启用保护前的签名检查放到后台执行。
+- Windows：同步版本，完成原生运行与隔离覆盖升级检查。本次没有新增已完成的原生网络保护功能。
 
-### 这一版的更新
+### 下载与升级
 
-- 两端明确标注内测版，检查独立的签名内测更新源；发现新版后，点击「GitHub 下载」查看说明并安装。
-- Mac 更新页使用中文提示，支持手动检查和重试，区分配置、网络、签名与系统兼容性问题。
-- 改进已有连接入口、配置前应用检查、账号引导和本地清理选项。
+下载下方 Assets 中的安装文件；Source code 不是安装包。
 
-Mac 0.5.19 及更早版本第一次需要从此页手动安装；安装 0.5.20 后可以检查后续内测更新。应用内直接替换安装暂未开放。已有正式更新源不接收此内测包。
+- **Mac：Apple 芯片、macOS 14 或更新。** 下载 `CEGR-AI-Assistant-v0.5.21-for-macOS-arm64.zip`。
+- **Windows x64：** 下载 `CEGR-AI-Assistant-v0.5.21-for-Windows-10-11-x64-Setup.exe`，退出助手后运行安装器。Windows 安装器尚无发布者签名；系统阻止时请保留提示联系提供方核对。
 
-### 已验证与限制
+**Mac 已有专用连接在运行时：** 先保存工作并正常退出所选浏览器、Claude 桌面端和 Claude Code；在旧助手「本机状态 → 诊断与维护 → 暂停连接」，确认专用服务停止后退出助手。保留旧应用及本机配置备份，用访达将新应用覆盖到原来的「应用程序」位置。打开新版后，点击「重新连接」，待本轮连接检测通过，再启用保护。不要点击「恢复原配置」、清空账号/连接资料或关闭系统安全保护。暂停失败、应用仍在使用或系统拒绝时，停止覆盖并联系支持。
 
-- Mac 安装包经过签名、公证和最终解压校验；Windows 在 Windows Server 2022 原生环境完成回归、Electron 运行测试及 0.5.14 → 0.5.20 覆盖升级，验证模拟数据、DPAPI 加密记录和系统代理保留。
-- Windows 的应用出口接管、断网保护、DNS / IPv6 / WebRTC / QUIC 防旁路及配置恢复尚未完整接入。**本版不能当作已启用的网络保护。**
-- Windows 10 / 11 客户设备、Mac 实际线路与保护、真实账号和系统扩展迁移仍需继续验收；两端编号一致不代表所有功能已经一致。
-- Windows 安装器尚无发布者签名；更新清单签名不等于 Windows 发布者签名。若系统阻止运行，请保留提示联系提供方核对。
+**0.5.20 可在软件更新页检查到本版。** Mac 0.5.19 及更早版本使用旧更新地址，首次请从此页面手动安装；以后即可检查内测更新。当前内测是发现新版后前往 GitHub 下载，由用户确认覆盖安装，尚不支持应用内自动替换。
 
-本版仅供内测，不作为正式交付版。校验值见 `SHA256SUMS.txt`。
+### 验证范围
+
+- Mac 最终 ZIP 已验证签名、公证、票据、Gatekeeper、扩展信息与权限；Swift 131 项、发布 Python 61 项和 Node 22 项检查通过。
+- Windows Server 2022：166 项检查通过、1 项平台特有检查跳过，6 组 Electron 原生检查通过；0.5.14 → 0.5.21 隔离升级保留模拟账号数据、DPAPI 可读性和系统代理。
+- **MacBook Air 实际扩展激活、应用出口、断网阻断、服务迁移及恢复仍需复验。** 包验证通过不等于真实应用保护已通过。
+- Windows 的应用出口接管、断网保护、DNS / IPv6 / WebRTC / QUIC 防旁路及配置恢复尚未完整接入；Windows 10/11 客户设备、生产注册回跳等仍需验收。版本号一致不代表所有功能已经一致。
+
+本版发布为 Pre-release，使用独立签名内测更新源，不改变正式更新。原版本文件保持不变。校验值见 `SHA256SUMS.txt`。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.20/CEGR-AI-Assistant-v0.5.20-for-macOS-arm64.zip" length="4000062" type="application/octet-stream" sparkle:edSignature="1xs6pdDUK6G/q8qcim1pdgL9N+wvcDTGLpXr0fy/OtzISk+GuoTVIx8X8i3MI1nMl4ObXMH67lhc7zyD+6TrCg=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.21/CEGR-AI-Assistant-v0.5.21-for-macOS-arm64.zip" length="4006580" type="application/octet-stream" sparkle:edSignature="Fi/2UnilhRKj6L6XNOFPbmOWUvZYXvG2HFjqIAVS8V3opYA8Xhu8ddjI3+7cAhJdO0pjmo7KGYWkMRoXnNIODw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: IVF9heJuJX66DFd51SmFp0AqFDF3AoYEHZEh3Yy0S8TtSZpCdPmbFUhdPvLs7AWaTJIHpcF+fLJt01RrokIgDg==
-length: 3544
+edSignature: 0iceYuihxmWyPbBIsCr6J/AdimYFoeDiD/CNIgSkn0fb2g9LCHhDtEH5q4CNpYXclDeIXb4ZU/2Nb6aDzavYDg==
+length: 4401
 -->
