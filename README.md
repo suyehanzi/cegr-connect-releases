@@ -2,7 +2,7 @@
 
 Windows 与 macOS 官方下载入口。
 
-**请下载版本页标注为 Latest 的正式版本。** 若页面暂无正式版本，表示仍在准备中；请勿将内部测试包作为正式版本转发。
+**请下载版本页标注为 Latest 的正式版本。0.x 也可作为正式版；标注为 Pre-release 的版本仅用于测试。** 若页面暂无正式版本，表示仍在准备中；请勿将内部测试包作为正式版本转发。
 
 [查看版本与下载](https://github.com/suyehanzi/cegr-connect-releases/releases) · [橙格商城](https://shop.cegr.si)
 
