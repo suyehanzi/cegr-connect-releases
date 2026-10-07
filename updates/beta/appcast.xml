@@ -4,36 +4,37 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>0.5.24</title>
-            <pubDate>Thu, 08 Oct 2026 00:12:40 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.24</link>
+            <title>0.5.25</title>
+            <pubDate>Thu, 08 Oct 2026 06:42:15 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.25</link>
             <sparkle:informationalUpdate></sparkle:informationalUpdate>
-            <sparkle:version>43</sparkle:version>
-            <sparkle:shortVersionString>0.5.24</sparkle:shortVersionString>
+            <sparkle:version>44</sparkle:version>
+            <sparkle:shortVersionString>0.5.25</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# CEGR 0.5.24 内测版
+            <description sparkle:format="markdown"><![CDATA[# CEGR 0.5.25 内测版
 
-Windows 与 macOS 统一为 0.5.24；macOS 构建号为 43。正式版目标仍为 v1.0.1。
+Windows 与 macOS 统一为 0.5.25；macOS 构建号 44。正式版目标仍为 v1.0.1。
 
-- Mac 修复代理握手成功后，因等待空数据发送回调而卡住，最终提示连接超时的问题。
-- 保留出口核验、半关闭响应处理、连接失败原因及诊断；不增加直连回退。
-- Windows 已核对转发实现，无同类空数据等待；同步版本并重新执行原生运行与隔离升级验证。
+- Mac 增加已识别旧本机方案的迁移准备：先保存私有恢复副本，再准备独立的新服务，保留旧服务、LuLu 规则和应用设置。
+- 新增文件变化、异常链接、权限及备份完整性检查。原有普通安装的兼容检查继续保留。
+- 迁移的新服务检查通过、所选应用退出后，才能请求系统保护授权。准备完成不等于应用已经接管；旧描述文件、端口规则和 CC 启动器仍需逐项迁移并验收。
+- Windows 同步版本，重新执行原生回归及隔离升级；Windows 无此 Mac 旧脚本迁移路径。
 
-## 验证与内测范围
+## 验证与范围
 
-本台物理网卡实验已复现空数据回调等待，普通数据发送对照成功。新增 HTTP / SOCKS5 真实 socket 与 curl 回归：修复前两组均超时，修复后均通过；核心 139 项检查通过。Air 的 0.5.23 诊断停在相同隧道传输阶段，新版仍须在该设备升级后复测，不能仅凭本机回归确认 Air 已恢复。
+Mac 核心 143 项及私有备份工具 10 项检查通过；arm64 包使用 Developer ID 签名并通过 Apple 公证。Windows 原生 167 项检查通过（另 1 项不适用跳过）、6 组运行时及 0.5.14 → 0.5.25 隔离升级通过，模拟记录、设备身份与 DPAPI 读取保持。
 
-Mac arm64 包使用 Developer ID 签名并通过 Apple 公证。应用内检查更新后前往 GitHub 下载，正常退出旧版后覆盖原安装，保留已有账号和配置；已装服务用户请按下载页先正常暂停本安装的专用连接。
+应用内检查更新后前往 GitHub 下载。正常退出旧版后覆盖原安装，保留已有账号和连接；已有客户专用服务的用户应先按原下载页流程暂停本安装的专用连接。旧本机独立线路请勿整体停用。
 
-应用保护仍须逐应用和异常场景验收。Windows 原生保护、线路接入、防旁路及恢复尚未完整接入；安装器尚无发布者签名。Windows Server 2022 隔离回归不替代 Windows 10/11 客户设备验收。
+本台新版连接复测、新专用服务的两个来源出口检查已通过；旧策略和规则保持原状，目前等待系统授权。完整迁移、逐应用出口、断网保护及恢复仍需当前设备实测。Windows 原生保护、线路接入、防旁路及恢复尚未全部集成；安装器尚无发布者签名。Windows Server 2022 回归不替代 Windows 10/11 客户验收。Air 的新版本实际连接与保护仍待复验。
 
-本版为 GitHub Pre-release，仅同步 beta 更新源，不更改正式更新通道。
+本版为 GitHub Pre-release，仅同步 beta 更新源，正式更新指针保持不变。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.24/CEGR-AI-Assistant-v0.5.24-for-macOS-arm64.zip" length="4082767" type="application/octet-stream" sparkle:edSignature="OlHl0ZCZMlwW/GCO5bs2Howc7JzqfxhgiloZ1R4+MOo6rAju6g5C5fpsiznr+veMCY4rmyQg0VJ4DK0CWGB2DQ=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.25/CEGR-AI-Assistant-v0.5.25-for-macOS-arm64.zip" length="4115252" type="application/octet-stream" sparkle:edSignature="ht+JhmHJM7z77LWMeRtBZF4uZm48AUi0SIm5Yu5P067ZcZvZSLhLXPbiAttYKnSZTYpEvRWHa8lt27k+ySJNAQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: cFwGWJC0XCkHBVE4I83sGsxoYc6LnNPy2bX5tiRv/MFdz4M+znZXpt0ZgGXPZ+10nDGzCF5F/y+hc7ZasBynDQ==
-length: 2868
+edSignature: UzwtuOSEsuHYnOWpxzDtzUCweIOLrxrzVskV2cGkA7awR+7ihX8JrwfxY+U1Gx54e49V79OPMZMmpQ7JG/StBQ==
+length: 3265
 -->
