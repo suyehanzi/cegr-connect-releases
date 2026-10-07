@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>橙格 · AI 环境助手</title>
+        <item>
+            <title>0.5.20</title>
+            <pubDate>Wed, 07 Oct 2026 17:03:40 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.20</link>
+            <sparkle:informationalUpdate></sparkle:informationalUpdate>
+            <sparkle:version>39</sparkle:version>
+            <sparkle:shortVersionString>0.5.20</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[橙格 · AI 环境助手 **0.5.20 内测版**，macOS 和 Windows 使用同一版本号。后续正式版计划为 **v1.0.1**，完成验收后再发布。
+
+### 下载和安装
+
+- **Mac（Apple 芯片，macOS 14 或更新）**：下载 `CEGR-AI-Assistant-v0.5.20-for-macOS-arm64.zip`，解压后退出旧版，将应用复制到「应用程序」覆盖安装。已完成 Developer ID 签名和 Apple 公证。
+- **Windows x64**：下载 `CEGR-AI-Assistant-v0.5.20-for-Windows-10-11-x64-Setup.exe`，退出旧版后运行安装器。安装身份和本地数据目录保持不变。
+- 使用下方 `Assets` 中的对应文件；GitHub 自动生成的 `Source code` 不是安装包。
+
+### 这一版的更新
+
+- 两端明确标注内测版，检查独立的签名内测更新源；发现新版后，点击「GitHub 下载」查看说明并安装。
+- Mac 更新页使用中文提示，支持手动检查和重试，区分配置、网络、签名与系统兼容性问题。
+- 改进已有连接入口、配置前应用检查、账号引导和本地清理选项。
+
+Mac 0.5.19 及更早版本第一次需要从此页手动安装；安装 0.5.20 后可以检查后续内测更新。应用内直接替换安装暂未开放。已有正式更新源不接收此内测包。
+
+### 已验证与限制
+
+- Mac 安装包经过签名、公证和最终解压校验；Windows 在 Windows Server 2022 原生环境完成回归、Electron 运行测试及 0.5.14 → 0.5.20 覆盖升级，验证模拟数据、DPAPI 加密记录和系统代理保留。
+- Windows 的应用出口接管、断网保护、DNS / IPv6 / WebRTC / QUIC 防旁路及配置恢复尚未完整接入。**本版不能当作已启用的网络保护。**
+- Windows 10 / 11 客户设备、Mac 实际线路与保护、真实账号和系统扩展迁移仍需继续验收；两端编号一致不代表所有功能已经一致。
+- Windows 安装器尚无发布者签名；更新清单签名不等于 Windows 发布者签名。若系统阻止运行，请保留提示联系提供方核对。
+
+本版仅供内测，不作为正式交付版。校验值见 `SHA256SUMS.txt`。
+]]></description>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.20/CEGR-AI-Assistant-v0.5.20-for-macOS-arm64.zip" length="4000062" type="application/octet-stream" sparkle:edSignature="1xs6pdDUK6G/q8qcim1pdgL9N+wvcDTGLpXr0fy/OtzISk+GuoTVIx8X8i3MI1nMl4ObXMH67lhc7zyD+6TrCg=="></enclosure>
+        </item>
+    </channel>
+</rss><!-- sparkle-signatures:
+edSignature: IVF9heJuJX66DFd51SmFp0AqFDF3AoYEHZEh3Yy0S8TtSZpCdPmbFUhdPvLs7AWaTJIHpcF+fLJt01RrokIgDg==
+length: 3544
+-->
