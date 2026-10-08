@@ -2,48 +2,35 @@
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
 --><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
-        <title>µ⌐Öµá╝ ┬╖ AI τÄ»σóâσè⌐µëï</title>
+        <title>橙格 · AI 环境助手</title>
         <item>
-            <title>0.5.29</title>
-            <pubDate>Thu, 08 Oct 2026 15:45:17 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.29</link>
-            <sparkle:informationalUpdate></sparkle:informationalUpdate>
-            <sparkle:version>55</sparkle:version>
-            <sparkle:shortVersionString>0.5.29</sparkle:shortVersionString>
+            <title>0.5.30</title>
+            <pubDate>Thu, 08 Oct 2026 17:09:22 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.30</link>
+            <sparkle:informationalUpdate>
+                <sparkle:belowVersion>56</sparkle:belowVersion>
+            </sparkle:informationalUpdate>
+            <sparkle:version>56</sparkle:version>
+            <sparkle:shortVersionString>0.5.30</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# 0.5.29 内测版
+            <description sparkle:format="markdown"><![CDATA[# 0.5.30 内测版
 
-Mac build 55；Windows 与 macOS 产品版本统一为 0.5.29。
+macOS build 56；Windows/macOS 产品版本统一为 0.5.30。
 
-## 这次解决的问题
+- 新增应用内下载、验证和确认安装更新，GitHub 手动下载仍可选择。
+- Mac 更新时保留连接恢复记录；连接服务会短暂中断，重新打开后恢复。账号、代理资料与偏好保留，未运行的服务保持暂停。
+- 修复 Mac 下载 ZIP 的中文应用名称乱码，并检查解压后的签名和权限。
+- 应用连接配置后增加保存工作、正常重启所选浏览器或 Claude 桌面端的入口；不强制结束应用，不自动终止 Claude Code。
 
-- 应用设置未匹配时，直接进入分项引导，不再在「开始使用」和「本机状态」之间来回跳。
-- 分别显示浏览器、Claude 桌面端和 CC 的配置结果。助手准备安装文件，提供「打开设备管理」入口和具体安装步骤；返回后自动核对生效状态。
-- CC 设置在后台处理；单独的 CC 配置问题不会隐藏浏览器和桌面端的系统安装步骤。已配置的应用可分别继续检查。
-- 组件版本真正匹配后更新进度提示。Windows 增加待处理项与配置步骤入口。
+0.5.29 及更早版本需要手动下载并安装一次 0.5.30，此后可在「软件更新」中下载安装后续版本。发现更新不会自动中断任务；由用户决定安装时间。系统组件若要求 macOS 授权，仍需本人确认。
 
-## 怎么完成 Mac 应用设置
-
-1. 保存并结束所选应用中的工作，完全退出应用。在「应用保护检查」中完成提示的组件更新和系统授权。
-2. 连接核验通过后，点击「开始配置所选应用」。助手会准备所需设置。
-3. 如需系统安装，点「打开设备管理」，选中「橙格 CEGR · 应用专用出口」并点击「安装」，再回到助手。系统密码由本人输入。
-4. 助手自动检查已生效的设置；如果只剩 CC，会直接显示完成 CC 设置的按钮。之后按应用检查实际使用与出口。
-
-客户版自带橙格保护扩展，无需另外安装 LuLu。打开文件不代表安装完成；原有配置冲突会保留并明确提示。不要关闭 Clash/TUN 或反复重填连接、卡密。
-
-## 验证与范围
-
-Mac 187 项优化核心检查通过；隔离界面走完未配置、已打开文件、部分完成、全部设置完成四种状态，实际设备管理入口通过。客户包通过 Developer ID 签名、Apple 公证和 Gatekeeper 检查。
-
-Windows 原生环境完成 184 项回归（1 项跳过）、6 组运行时检查及保留数据的隔离升级；测试环境为 Windows Server 2022，安装器尚无发布者签名。Windows 完整应用保护服务仍未全部接入。
-
-配置匹配、打开应用、单元检查和公证均不替代逐应用固定出口、异常阻断、恢复及重启实测。Air 的本版完整验收仍待进行。本版是 GitHub Pre-release，使用 beta 更新源；不修改正式 Latest，后续正式版目标为 v1.0.1。
+本版为内测版本，正式版目标仍为 v1.0.1。Windows 安装程序尚未具有发布者签名，完整原生保护仍在集成验收；Air 的逐应用固定出口、断网保护与重启恢复仍需实测。间歇性代理握手 403 尚未确认解决。本次改进更新与配置操作，不将配置匹配等同于全部保护验收通过。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.29/CEGR-AI-Assistant-v0.5.29-for-macOS-arm64.zip" length="4475180" type="application/octet-stream" sparkle:edSignature="snZHoo1P+/Jdj/pC/76y3De5mxpLAkXrMWMTZEqBRt1pDLNKW9Z8QX4FRxGoQrUng2S6W5WBCsqGbTlzgxz6BQ=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.30/CEGR-AI-Assistant-v0.5.30-for-macOS-arm64.zip" length="4490941" type="application/octet-stream" sparkle:edSignature="arhdj11mradSw710T4gydyS7Qv+n2B9W8wmkU5JWBYZpsyzsYBNphlRg6i2eFf0w+ESnA8N3DPHMlu7dKbnhDA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 4d07Qh7BuyA2p5VLDg0j5NBmnrFTjPgIecTqn/UERGfShfE0Oh25o6IXt4OjVUoBBSsdlJytMHfrVheejljBBQ==
-length: 3715
+edSignature: 3lboAuNyTgxe0bOWPT6/FFBAiVTQ3UNzXwqOnzcaXuU4ASBpkF0ddSzzplNsIBHhGenvDY5B7O6CbJC4UiwfCw==
+length: 2712
 -->
