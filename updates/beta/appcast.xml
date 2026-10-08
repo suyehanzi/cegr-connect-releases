@@ -4,44 +4,44 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>0.5.27</title>
-            <pubDate>Thu, 08 Oct 2026 14:08:50 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.27</link>
+            <title>0.5.28</title>
+            <pubDate>Thu, 08 Oct 2026 15:00:24 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.28</link>
             <sparkle:informationalUpdate></sparkle:informationalUpdate>
-            <sparkle:version>53</sparkle:version>
-            <sparkle:shortVersionString>0.5.27</sparkle:shortVersionString>
+            <sparkle:version>54</sparkle:version>
+            <sparkle:shortVersionString>0.5.28</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 0.5.27 内测版
+            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 0.5.28 内测版
 
-macOS 与 Windows 统一为 0.5.27；Mac 为 build 53。继续内测，正式版目标为 v1.0.1。
+macOS 与 Windows 统一为 0.5.28；Mac 为 build 54。继续内测，正式版目标为 v1.0.1。
 
 ## 本次修复
 
-- 修复 Mac 完成配置后，「查看检测结果」与「继续配置与验收」在两个页面之间来回跳转的问题。
-- 新增「应用保护检查」面板：两处入口直接打开，列出当前设置、浏览器出口检测入口、Claude 桌面端入口、CC 受保护启动命令，以及异常阻断和恢复的检查方法。
-- 已完成系统授权或应用设置时，隐藏重复操作按钮，避免重复安装描述文件或授权。
-- 提供不含出口地址、连接凭据和本机路径的检查摘要。打开面板或应用不会被误计为保护验收通过。
-- 保留 0.5.26 的短时复核、固定出口和故障关闭规则。本次不改变用户线路或 Clash TUN。
+- 修复主程序升级后，因已有过滤授权而隐藏旧网络扩展更新入口的问题。现在核对系统实际启用的组件版本，并显示当前版本和目标版本。
+- 在本机状态、向导及应用保护检查中提供明确的组件更新操作，区分等待系统授权、等待重启、状态未知和版本不一致。系统返回请求完成后仍会重新查询实际启用版本。
+- 更新使用系统替换请求，保留匹配的现有过滤授权，拒绝产品版本或构建号降级；不会通过卸载旧扩展或关闭保护强行更新。
+- 检查面板直接显示「所选应用尚未退出」等操作提示。应用检查入口要求当前组件版本、过滤授权、连接和应用设置都符合要求。
+- 两端登录自检文案明确区分配置已保存与登录、重启、唤醒后的恢复实测。
 
 ## 下载与升级
 
-Mac：Apple Silicon、macOS 14 或更新版本；安装包已完成 Developer ID 签名和 Apple 公证。Windows：x64 内测安装器，尚无发布者签名。
+Mac：Apple Silicon、macOS 14 或更新版本，已完成 Developer ID 签名和 Apple 公证。Windows：x64 内测安装器，尚无发布者签名。应用内检查更新后在 GitHub 下载对应安装包并手动安装；保留原连接资料和安装位置。
 
-检查更新后在此下载对应安装包，手动安装。升级前保存工作并退出助手；Mac 替换原位置的客户版后重新打开。现有系统授权和连接资料无需重复填写。查看本机状态中的「查看保护检查」，或开始使用中的「打开应用保护检查」。
+Mac 更新后若提示组件需要更新，先保存并结束所选应用的工作、完全退出这些应用，再点击「更新保护组件」，按系统提示操作。看到待授权或待重启时，完成对应步骤后再次检查。不要卸载扩展、重置网络或关闭 Clash/TUN。应用策略未匹配时仍需完成「橙格 CEGR · 应用专用出口」的系统安装，再进行逐应用验收。
 
-## 验证范围
+## 验证范围与限制
 
-本台已完成实际按钮点击验证：两个入口均打开同一个检查面板，返回正常，已完成设置不会再提示重复授权。Mac 生产构建核心回归通过。Windows 184 项单元测试、6 组原生运行检查、隔离升级与精确安装包核验通过；1 项不适用测试跳过。
+Mac 原生生产构建与 181 项优化核心回归通过，覆盖旧版本、同版本旧构建、待授权/重启、残留记录、未知状态及防降级。本台已安装 build 54，实际界面正确识别仍在启用的旧组件并给出直接更新入口，配置保留。Windows 184 项单元测试通过、1 项不适用跳过，6 组原生运行检查、隔离升级与精确安装包核验通过。
 
-完整逐应用出口、异常阻断及恢复仍需实测，Air 安装尚未验收。Windows 保护服务、授权线路、浏览器防旁路和恢复流程尚未全部接入主应用；版本相同不代表完整保护功能已同步。代理供应商间歇拒绝的原因仍待核查。
+网络扩展实际替换和 Air 0.5.28 复验仍需设备确认；完整逐应用出口、异常阻断及恢复、登录/重启恢复未因此记为通过。Windows 原生保护服务、应用防旁路及恢复仍未全部接入主应用；同版本不代表全部保护功能一致。原有间歇复核仍需观察，不据本次组件升级修复宣称上游问题已经根治。
 
-本版保持 GitHub Pre-release，使用独立内测更新源，不标记为 Latest，不切换正式更新指针。
+本版保持 GitHub Pre-release，使用独立内测更新源，不设为 Latest，不切换正式更新指针。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.27/CEGR-AI-Assistant-v0.5.27-for-macOS-arm64.zip" length="4382286" type="application/octet-stream" sparkle:edSignature="/0lj2mwdb2l9HMn3fb42mOXfDzivqsrbiOdPt4Wmnuz5F4d7LoDZdnI0Q3HR3Bu+KILuySYQv0gxj9tvPFU5AA=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.28/CEGR-AI-Assistant-v0.5.28-for-macOS-arm64.zip" length="4412827" type="application/octet-stream" sparkle:edSignature="w3y8C2L0BMm6FzwmIY/SKHy0NxA2Q3MHhDE3165NCf7pSLyoTbPDSvo/U+wBLRJs/rSUtCFlygsdTRV8mC8mBA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 4Tp/ZabooRObMso4Zzl9a010lG+umjTDnBOk8Euc8ySguB5dvKwLy7nBkW0k1k2mR3ClaMMhak10Cogwe6FTAg==
-length: 3538
+edSignature: kmR4+Z8Gf2nO95c1N+wsyDsG5ULvZMfU9JU0XCzoPdCsg12OEY7JCiYWUs17HimsdKxogrKkZWjvqc/cahKgCg==
+length: 4093
 -->
