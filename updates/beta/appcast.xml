@@ -4,46 +4,48 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.4</title>
-            <pubDate>Fri, 09 Oct 2026 19:03:35 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.4</link>
+            <title>1.0.5</title>
+            <pubDate>Fri, 09 Oct 2026 21:22:44 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.5</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>63</sparkle:version>
-            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+            <sparkle:version>64</sparkle:version>
+            <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 1.0.4
+            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 1.0.5
 
-适用于 Apple 芯片 Mac，macOS 14 或更新版本。主程序与保护组件：1.0.4（63）。Windows 保持 0.5.30 内测。
+适用于 Apple 芯片 Mac，macOS 14 或更新版本。主程序与保护组件：1.0.5（64）。Windows 保持 0.5.30 内测。
 
-## 本次修复
+## 本次更新
 
-修复 1.0.3 选择「本机 SOCKS5」后，提示确认非加密代理认证，却没有显示确认框的问题。连接表单现在使用一致的判断显示确认框、启用检测按钮和提交检测。
+在「本机状态」底部新增默认折叠的「高级设置」，将「解除保护／恢复原配置」放在其中。操作前展示解除风险、退出应用与移除本次描述文件的步骤，并提供设备管理入口；执行前再次确认。
 
-通过本机 Clash 连接带账号的 HTTP／SOCKS5 住宅代理时，在连接设置下方勾选「此类型的代理认证未加密，我了解并允许本次检测」，再点检测按钮（已有安装时显示「检测并应用」）。保留已有住宅代理、预期固定出口和 Clash 端口；无需重新导入节点。
+**解除会影响本次安装中的全部受保护应用。完成后，CEGR 不再保证这些应用的固定出口或断网保护；误开浏览器、Claude 桌面端或 CC 时，可能使用其他出口。** 若仅需临时停止连接，请使用「诊断与维护 → 暂停连接」，保留应用保护。
 
-这项确认不会取消保护或允许备用出口。Clash 本机入口不能由助手证明后续链路加密，因此保留原有认证确认要求。住宅固定出口失败时，专用应用请求仍失败，不切换到前置 IP 或直连。已有 HTTPS／AnyTLS 前置的确认逻辑保留。
+恢复失败会明确提示未完成，并要求处理后重试。后来改动过的文件仍会保留，不将有待核对的恢复结果显示为全部完成。
+
+本次仅调整入口、确认和反馈，不改连接服务、过滤器与配置恢复后端。保留 1.0.4 的本机 SOCKS5 认证确认、固定出口失败不兜底、CC 设置修复及诊断日志。
 
 ## 更新与反馈
 
-在「更多工具 → 软件更新」下载并确认安装，也可下载本页 ZIP 手动覆盖。更新前保存工作；保留原账号、连接记录、偏好和权益。如果提示更新保护组件，按助手与 macOS 的提示完成。
+打开「更多工具 → 软件更新」，下载并确认安装；也可下载本页 ZIP 手动覆盖。更新前保存工作。升级保留原账号、连接记录、偏好和权益；不要为升级点击「解除保护／恢复原配置」。若提示更新保护组件，请保存并退出所选应用，按助手和 macOS 提示完成。
 
-遇到问题时，在「本机状态 → 导出诊断日志」保存日志，反馈发生时间、应用和具体现象。日志不会自动上传。
+遇到问题时，在「本机状态 → 导出诊断日志」保存日志，并反馈发生时间、应用和具体现象。日志不会自动上传。
 
 ## 验证范围
 
-209 项核心回归通过；使用实际表单代码复现旧版卡点，并通过修复后的 32 项流程断言，覆盖手动输入、导入、HTTP／SOCKS5、本机前置与已有加密前置。隔离网络检查覆盖固定出口失败不兜底、关闭既有连接及重新核验后恢复。安装包签名、Apple 公证、最终归档和隔离的 1.0.3→1.0.4 签名更新已核验。
+209 项核心回归、Mac 完整构建及原生高级设置界面预览通过。Developer ID 签名、Apple 公证、最终 ZIP 解压校验和隔离的 1.0.4→1.0.5 签名更新已核验；隔离安装后的文件与候选一致，合成测试资料保留。
 
-**客户实际 Clash 节点、住宅供应商与公司网络环境的连接故障尚未确认解决。** 本轮保留本台固定出口、Clash TUN 和 LuLu，未替换本台日常安装。**客户设备、逐应用真实出口、登录／重启恢复与完整防旁路矩阵的完整验收尚未全部完成。** 自动检查和配置匹配不等于客户设备验收通过。
+本轮未在日常使用的电脑上执行真实解除保护或替换安装，保留现有固定出口、Clash TUN 和 LuLu。**客户设备上的实际解除与恢复、逐应用出口、登录／重启恢复及完整防旁路矩阵的完整验收尚未全部完成。** 编译、界面预览和自动检查不能替代客户设备验收。此前客户线路中的间歇 TLS／上游连接故障尚未确认解决，本更新不宣称修复这些故障。
 
-Windows 本次未更新，本机 SOCKS5 前置尚未集成到 Windows 客户版。历史正式版本保留。
+Windows 本次未更新，配置撤销／恢复尚未集成到 Windows 客户版。历史正式版本保留。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.4/CEGR-AI-Assistant-v1.0.4-for-macOS-arm64.zip" length="4592159" type="application/octet-stream" sparkle:edSignature="qdAdoDK48a/D1/jl6CEPNAwkYjb+7CjijYGjgmlKnG1fQuNksaGB8FsyvzoQmo+8GKXEis+omLTT5iv7SQ79DQ=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.5/CEGR-AI-Assistant-v1.0.5-for-macOS-arm64.zip" length="4597339" type="application/octet-stream" sparkle:edSignature="+KNfB17EsDBDSQqEv3lfcInGEo9GEKreIR8useM9gxpCo8j8F1UstokLUngjRrv8R+qCtZ8kDNUhRojKb7BhDA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: Tsqq7uowjg9HYrB7tDO6kwHfjoGtNIXH5EnCfkbctpsKSI2bIeGxwXrDoiwxyFNJvyW8Qr9yIoD/c1L8jHgCBw==
-length: 3850
+edSignature: 3DHQCIbXy00QNQ4ASuoDQ3k5moilZxFrhbaoDQfG2ASxrH+2ojdh5D/Y/OZQAeZdMgxg74vocRia9UVPvox+BA==
+length: 3996
 -->
