@@ -4,55 +4,48 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.0</title>
-            <pubDate>Fri, 09 Oct 2026 09:58:12 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.0</link>
+            <title>1.0.1</title>
+            <pubDate>Fri, 09 Oct 2026 16:04:22 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.1</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>57</sparkle:version>
-            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:version>59</sparkle:version>
+            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 v1.0.0 · macOS
+            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 v1.0.1 · macOS
 
-Mac v1.0.0 正式发布，适用于 Apple 芯片 Mac，要求 macOS 14 或更新版本。安装包已通过 Developer ID 签名和 Apple 公证，主程序与保护组件均为 1.0.0（57）。
+适用于 Apple 芯片 Mac，要求 macOS 14 或更新版本。主程序与保护组件为 1.0.1（59）。
 
-## 下载与安装
+## 本次更新
 
-下载附件 `CEGR-AI-Assistant-v1.0.0-for-macOS-arm64.zip`，解压后将应用放入“应用程序”。`Source code` 不是安装包；`SHA256SUMS.txt` 用于核对下载完整性。
+- 修复“已有设置”检查过于宽泛的问题：仅存在强制安装的浏览器扩展等无重叠策略时，可保留原设置继续配置；真实的代理、DNS 和保护策略冲突仍会明确提示。
+- 显示具体的配置阻塞项和草稿检测时间，区分草稿检测与实际运行连接。
+- 修复尚未完成安装时，保护组件版本可能一直显示“正在核对”的问题。
+- 新增脱敏诊断日志：自动记录连接检测、服务状态、失败阶段、错误代码及配置操作结果，恢复后仍可查看此前失败。最多保存最近 240 条，写入新记录时清理超过 7 天的记录。
+- 在「本机状态」及「查看保护检查」增加「导出诊断日志」。日志不含连接地址、代理密码、卡密、令牌、账号或聊天内容，不会自动上传。
 
-首次使用按助手提示登录账号、兑换卡密、填入自己的代理连接并完成系统授权。Mac 客户版自带网络保护组件，无需额外安装 LuLu。
+## 更新与反馈
 
-## 本版功能
+1. 在助手「软件更新」检查并下载安装；也可下载本页 `CEGR-AI-Assistant-v1.0.1-for-macOS-arm64.zip` 手动安装。`Source code` 不是安装包。0.5.29 或更早版本需手动升级。
+2. 更新前保存工作，保留现有账号、连接和网络保护，不清空配置。若提示更新保护组件，请保存并正常退出所选应用，按系统提示完成后再核对状态。
+3. 遇到问题后，在「本机状态 → 导出诊断日志」保存文件，通过原订单发给客服，并说明发生时间、出问题的应用和具体表现。记录从升级后开始，不能补回旧版历史。
 
-- 账号与订阅、连接导入、应用配置引导和本机状态检查。
-- 为选定浏览器、Claude 桌面端与 Claude Code 配置专用连接。
-- 应用内检查、下载和确认安装更新，同时保留 GitHub 手动下载入口。
-- 返回本机状态页面时立即刷新服务状态，减少旧检测结果滞留。
+## 已知限制与验证范围
 
-## 从内测版升级
+本版改善安装兼容性及排查能力。**上游连接超时、AnyTLS 前置兼容性、偶发连接重置，以及个别设备上的 Claude Code 配置问题，尚未确认解决。** 升级不能保证供应商线路恢复稳定，也不代表已通过公司网络安全策略兼容性验收。
 
-0.5.30 可从「更多工具 → 软件更新」检查并安装新版；更早版本请手动下载本页安装包。升级前保存工作、正常退出助手及所选应用，保留原有账号和连接资料，勿点击“恢复原配置”或清空数据。
+**逐应用实际出口、完整断网保护、登录／重启恢复和客户设备升级后的完整验收尚未全部完成。** 设置匹配、打开网页或一次检测成功不能代替这些验收。公司管理策略需由公司 IT 核实，勿停用安全软件或关闭证书校验来尝试解决。
 
-如果提示保护组件版本不一致，请在「本机状态 → 查看保护检查」点击「更新保护组件」，按 macOS 提示完成授权或重启。完成后再核对应用连接，不需要关闭 Clash/TUN。
+Windows 保持 0.5.30 内测，本次没有发布 Windows 1.0.1；完整原生保护及同类持续诊断日志尚未全部集成。[Windows 内测下载](https://shop.cegr.si/downloads/cegr/windows/preview/0.5.30/CEGR-AI-Assistant-v0.5.30-for-Windows-10-11-x64-Setup.exe)。
 
-## 当前验证范围
-
-已验证本台安装、保护组件版本匹配、固定出口核验，以及 Claude Code 的一次有界阻断与恢复；隔离副本的签名更新下载和替换已通过。
-
-**逐应用断网保护、登录／重启恢复和本次更新后自动重新打开的完整验收尚未全部完成。** 部分 Chrome 检测请求曾出现“客户端拦截”，仍需复验；设置匹配不代表上述测试已通过。遇到问题可复制助手内的检查摘要，通过原订单联系客服。
-
-## Windows 内测
-
-Windows 继续保持 0.5.30 内测，不属于此次 Mac 正式版范围。[下载 Windows 内测安装器](https://shop.cegr.si/downloads/cegr/windows/preview/0.5.30/CEGR-AI-Assistant-v0.5.30-for-Windows-10-11-x64-Setup.exe)。完整应用断网保护、防旁路与配置恢复仍未全部集成，安装器尚无发布者签名。
-
-软件升级不消耗新卡密。代理多设备并用限制由供应商和套餐决定；请勿在公开页面发送卡密、密码或代理凭据。
+软件升级不消耗新卡密。请勿在公开反馈中发送密码、卡密或完整代理配置。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.0/CEGR-AI-Assistant-v1.0.0-for-macOS-arm64.zip" length="4490992" type="application/octet-stream" sparkle:edSignature="8YvTYOf1LpydbuoK7igXrcfsEer6sPCg5T9N40+4RtuCg6gtwKfGpUcKhMp3gsJ5XmoPkX8kK4aRW3JvMumaBw=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.1/CEGR-AI-Assistant-v1.0.1-for-macOS-arm64.zip" length="4563757" type="application/octet-stream" sparkle:edSignature="mEv/ROU7R6CnfDbt9WTi40CRuJaMdiY5NfZWFxSx3keQ5Fe7SKjfd58FzLPj6oAzrZRx/EX29LMHa99xEYIDDQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: gqp/NDCALEHzZ7UqlvOEurDka9o6m9oRE9kTtQIHr+BC643SruHc9Kldl10Rh7utwt5/3PbGMGy23iyqXuxnBQ==
-length: 4017
+edSignature: f1JCw+XUmzH8M9oApuKUYBc9IoIUvTzA1EHQTep42OgYdXxsijgmjight6XYKZwRPAFrQTqj7LNxJTVpculZBQ==
+length: 4195
 -->
