@@ -4,33 +4,55 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>0.5.30</title>
-            <pubDate>Thu, 08 Oct 2026 17:09:22 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.30</link>
+            <title>1.0.0</title>
+            <pubDate>Fri, 09 Oct 2026 09:58:12 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.0</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>56</sparkle:version>
-            <sparkle:shortVersionString>0.5.30</sparkle:shortVersionString>
+            <sparkle:version>57</sparkle:version>
+            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# 0.5.30 内测版
+            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 v1.0.0 · macOS
 
-macOS build 56；Windows/macOS 产品版本统一为 0.5.30。
+Mac v1.0.0 正式发布，适用于 Apple 芯片 Mac，要求 macOS 14 或更新版本。安装包已通过 Developer ID 签名和 Apple 公证，主程序与保护组件均为 1.0.0（57）。
 
-- 新增应用内下载、验证和确认安装更新，GitHub 手动下载仍可选择。
-- Mac 更新时保留连接恢复记录；连接服务会短暂中断，重新打开后恢复。账号、代理资料与偏好保留，未运行的服务保持暂停。
-- 修复 Mac 下载 ZIP 的中文应用名称乱码，并检查解压后的签名和权限。
-- 应用连接配置后增加保存工作、正常重启所选浏览器或 Claude 桌面端的入口；不强制结束应用，不自动终止 Claude Code。
+## 下载与安装
 
-0.5.29 及更早版本需要手动下载并安装一次 0.5.30，此后可在「软件更新」中下载安装后续版本。发现更新不会自动中断任务；由用户决定安装时间。系统组件若要求 macOS 授权，仍需本人确认。
+下载附件 `CEGR-AI-Assistant-v1.0.0-for-macOS-arm64.zip`，解压后将应用放入“应用程序”。`Source code` 不是安装包；`SHA256SUMS.txt` 用于核对下载完整性。
 
-本版为内测版本，正式版目标仍为 v1.0.1。Windows 安装程序尚未具有发布者签名，完整原生保护仍在集成验收；Air 的逐应用固定出口、断网保护与重启恢复仍需实测。间歇性代理握手 403 尚未确认解决。本次改进更新与配置操作，不将配置匹配等同于全部保护验收通过。
+首次使用按助手提示登录账号、兑换卡密、填入自己的代理连接并完成系统授权。Mac 客户版自带网络保护组件，无需额外安装 LuLu。
+
+## 本版功能
+
+- 账号与订阅、连接导入、应用配置引导和本机状态检查。
+- 为选定浏览器、Claude 桌面端与 Claude Code 配置专用连接。
+- 应用内检查、下载和确认安装更新，同时保留 GitHub 手动下载入口。
+- 返回本机状态页面时立即刷新服务状态，减少旧检测结果滞留。
+
+## 从内测版升级
+
+0.5.30 可从「更多工具 → 软件更新」检查并安装新版；更早版本请手动下载本页安装包。升级前保存工作、正常退出助手及所选应用，保留原有账号和连接资料，勿点击“恢复原配置”或清空数据。
+
+如果提示保护组件版本不一致，请在「本机状态 → 查看保护检查」点击「更新保护组件」，按 macOS 提示完成授权或重启。完成后再核对应用连接，不需要关闭 Clash/TUN。
+
+## 当前验证范围
+
+已验证本台安装、保护组件版本匹配、固定出口核验，以及 Claude Code 的一次有界阻断与恢复；隔离副本的签名更新下载和替换已通过。
+
+**逐应用断网保护、登录／重启恢复和本次更新后自动重新打开的完整验收尚未全部完成。** 部分 Chrome 检测请求曾出现“客户端拦截”，仍需复验；设置匹配不代表上述测试已通过。遇到问题可复制助手内的检查摘要，通过原订单联系客服。
+
+## Windows 内测
+
+Windows 继续保持 0.5.30 内测，不属于此次 Mac 正式版范围。[下载 Windows 内测安装器](https://shop.cegr.si/downloads/cegr/windows/preview/0.5.30/CEGR-AI-Assistant-v0.5.30-for-Windows-10-11-x64-Setup.exe)。完整应用断网保护、防旁路与配置恢复仍未全部集成，安装器尚无发布者签名。
+
+软件升级不消耗新卡密。代理多设备并用限制由供应商和套餐决定；请勿在公开页面发送卡密、密码或代理凭据。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.30/CEGR-AI-Assistant-v0.5.30-for-macOS-arm64.zip" length="4490941" type="application/octet-stream" sparkle:edSignature="arhdj11mradSw710T4gydyS7Qv+n2B9W8wmkU5JWBYZpsyzsYBNphlRg6i2eFf0w+ESnA8N3DPHMlu7dKbnhDA=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.0/CEGR-AI-Assistant-v1.0.0-for-macOS-arm64.zip" length="4490992" type="application/octet-stream" sparkle:edSignature="8YvTYOf1LpydbuoK7igXrcfsEer6sPCg5T9N40+4RtuCg6gtwKfGpUcKhMp3gsJ5XmoPkX8kK4aRW3JvMumaBw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 3lboAuNyTgxe0bOWPT6/FFBAiVTQ3UNzXwqOnzcaXuU4ASBpkF0ddSzzplNsIBHhGenvDY5B7O6CbJC4UiwfCw==
-length: 2712
+edSignature: gqp/NDCALEHzZ7UqlvOEurDka9o6m9oRE9kTtQIHr+BC643SruHc9Kldl10Rh7utwt5/3PbGMGy23iyqXuxnBQ==
+length: 4017
 -->
