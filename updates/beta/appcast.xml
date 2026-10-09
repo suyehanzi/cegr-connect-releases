@@ -4,57 +4,46 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.3</title>
-            <pubDate>Fri, 09 Oct 2026 18:41:17 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.3</link>
+            <title>1.0.4</title>
+            <pubDate>Fri, 09 Oct 2026 19:03:35 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.4</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>62</sparkle:version>
-            <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
+            <sparkle:version>63</sparkle:version>
+            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 1.0.3
+            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 1.0.4
 
-适用于 Apple 芯片 Mac，macOS 14 或更新版本。主程序与保护组件：1.0.3（62）。Windows 保持 0.5.30 内测。
+适用于 Apple 芯片 Mac，macOS 14 或更新版本。主程序与保护组件：1.0.4（63）。Windows 保持 0.5.30 内测。
 
-## 本次更新
+## 本次修复
 
-- 新增「本机 SOCKS5」前置，支持通过现有 Clash 的 127.0.0.1:7897 等本机入口，再连接原有 HTTP 或 SOCKS5 固定出口。网站请求仍须经过固定出口；固定出口不可达或握手被拒绝时请求失败，不使用前置 IP 或直连兜底。前置握手失败的出口复验会关闭专用连接；Clash 自身与 TUN 保持运行。
-- 修复 Claude Code 设置变化后反复点击仍提示“未重复覆盖”的问题。只修复必要的代理与保护启动设置，保留其它偏好，并保存私有恢复记录。第三方进程启动器冲突或损坏的设置文件仍会给出明确提示。
-- 仅剩 CC 设置待完成时，不再要求退出已经配置好的浏览器和桌面端；仍须先保存并结束 CC 任务。
-- 诊断日志增加本机 SOCKS5 前置类型标记，不记录节点地址、密码或聊天内容。
+修复 1.0.3 选择「本机 SOCKS5」后，提示确认非加密代理认证，却没有显示确认框的问题。连接表单现在使用一致的判断显示确认框、启用检测按钮和提交检测。
 
-## 本机 Clash 前置设置
+通过本机 Clash 连接带账号的 HTTP／SOCKS5 住宅代理时，在连接设置下方勾选「此类型的代理认证未加密，我了解并允许本次检测」，再点检测按钮（已有安装时显示「检测并应用」）。保留已有住宅代理、预期固定出口和 Clash 端口；无需重新导入节点。
 
-1. 保持 Clash 运行，在 Clash 中确认 SOCKS5 监听端口。
-2. 助手「我的连接 → 更多连接设置」开启「使用前置连接」，选择「本机 SOCKS5」，填写端口（如 7897）。地址固定为 127.0.0.1，无需导出 Clash 订阅或节点密码。
-3. 上方继续保留原住宅代理的 HTTP／SOCKS5 类型、地址和凭据，并保留原固定出口 IP。不要把 Clash 节点 IP 填成固定出口。
-4. 检测通过后按提示应用线路；出口不符或检测失败时不要应用。此选项目前不支持 HTTPS 类型的第二跳代理。
-5. 在「本机状态 → 查看保护检查」完成组件更新和待处理设置；CC 仍待配置时，保存并结束 CC 任务，再点「完成 Claude Code 设置」。
+这项确认不会取消保护或允许备用出口。Clash 本机入口不能由助手证明后续链路加密，因此保留原有认证确认要求。住宅固定出口失败时，专用应用请求仍失败，不切换到前置 IP 或直连。已有 HTTPS／AnyTLS 前置的确认逻辑保留。
 
-Clash 内部显示的 Shadowsocks／UDP 标签不需要填入助手；助手使用其本机 SOCKS5 的 TCP 连接。正常关闭助手主窗口不会把专用线路变成前置直出；后台恢复探测只检查原链路，不是应用兜底。
+## 更新与反馈
 
-## 更新和反馈
+在「更多工具 → 软件更新」下载并确认安装，也可下载本页 ZIP 手动覆盖。更新前保存工作；保留原账号、连接记录、偏好和权益。如果提示更新保护组件，按助手与 macOS 的提示完成。
 
-在「更多工具 → 软件更新」检查、下载并确认安装。GitHub ZIP 手动覆盖安装保留为备用选项。更新前保存工作；已有账号、连接、偏好与卡密权益保留。若提示更新保护组件，按助手与 macOS 提示完成后再核对应用设置。
-
-仍使用 1.0.0／1.0.1 且卡在“连接服务尚未完成交接”时，可手动覆盖一次。手动覆盖前在助手暂停专用连接，再正常退出助手；安装后按提示恢复。不要清空数据或修改现有 Clash/TUN。
-
-故障发生后在「本机状态 → 导出诊断日志」保存，反馈发生时间、应用、表现和前置类型。日志不自动上传。
+遇到问题时，在「本机状态 → 导出诊断日志」保存日志，反馈发生时间、应用和具体现象。日志不会自动上传。
 
 ## 验证范围
 
-已通过本机隔离网络回归：前置存活而出口不可达、出口认证拒绝、异常握手、前置停止、既有连接关闭、重新核验后恢复及独立到期关闭。也已验证 CC 定向修复、偏好和恢复基线保留。208 项核心回归通过，安装包签名、Apple 公证、最终归档与隔离的 1.0.2→1.0.3 签名更新已核验；隔离更新后的文件与候选包一致，测试资料保留。
+209 项核心回归通过；使用实际表单代码复现旧版卡点，并通过修复后的 32 项流程断言，覆盖手动输入、导入、HTTP／SOCKS5、本机前置与已有加密前置。隔离网络检查覆盖固定出口失败不兜底、关闭既有连接及重新核验后恢复。安装包签名、Apple 公证、最终归档和隔离的 1.0.3→1.0.4 签名更新已核验。
 
-**客户实际 Clash 节点、住宅供应商和公司网络环境尚未确认解决。** 本轮测试不更改本台正在运行的固定出口、Clash TUN 或 LuLu；新包未替换到本台日常安装。**客户设备、逐应用真实出口、登录／整机重启恢复与完整防旁路矩阵的完整验收尚未全部完成。** 配置匹配和自动回归不等于这些设备验收通过。
+**客户实际 Clash 节点、住宅供应商与公司网络环境的连接故障尚未确认解决。** 本轮保留本台固定出口、Clash TUN 和 LuLu，未替换本台日常安装。**客户设备、逐应用真实出口、登录／重启恢复与完整防旁路矩阵的完整验收尚未全部完成。** 自动检查和配置匹配不等于客户设备验收通过。
 
-Windows 本次未更新，新能力尚未集成到 Windows 客户版。历史正式版本保留。
+Windows 本次未更新，本机 SOCKS5 前置尚未集成到 Windows 客户版。历史正式版本保留。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.3/CEGR-AI-Assistant-v1.0.3-for-macOS-arm64.zip" length="4593351" type="application/octet-stream" sparkle:edSignature="DJ4UULVv7YXLOH2o3wzCQICiyc5LurVQtUalNARpThgAkXmDCj8XYyO+JmhiVxDrEeOJ/bkwBobTEqQhPD8UBw=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.4/CEGR-AI-Assistant-v1.0.4-for-macOS-arm64.zip" length="4592159" type="application/octet-stream" sparkle:edSignature="qdAdoDK48a/D1/jl6CEPNAwkYjb+7CjijYGjgmlKnG1fQuNksaGB8FsyvzoQmo+8GKXEis+omLTT5iv7SQ79DQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: JPV6AlOU251sr+UfUvoVtP+jMwqdxJgNSScUpws5sAPpm01RA7wPG0iNFySOicx5iNkbOLTQ9ftYCoqH/kA8BA==
-length: 5263
+edSignature: Tsqq7uowjg9HYrB7tDO6kwHfjoGtNIXH5EnCfkbctpsKSI2bIeGxwXrDoiwxyFNJvyW8Qr9yIoD/c1L8jHgCBw==
+length: 3850
 -->
