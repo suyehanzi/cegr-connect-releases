@@ -1,12 +1,12 @@
 # 橙格 · AI 环境助手
 
-## Mac v1.0.2
+## Mac v1.0.3
 
-**[下载 Mac v1.0.2](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.2/CEGR-AI-Assistant-v1.0.2-for-macOS-arm64.zip)** · [版本说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.2)
+**[下载 Mac v1.0.3](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.3/CEGR-AI-Assistant-v1.0.3-for-macOS-arm64.zip)** · [版本说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.3)
 
-适用于 **Apple 芯片 Mac，macOS 14 或更新版本**。安装包已通过 Developer ID 签名和 Apple 公证，主程序和保护组件为 1.0.2（61）。
+适用于 **Apple 芯片 Mac，macOS 14 或更新版本**。安装包已通过 Developer ID 签名和 Apple 公证，主程序和保护组件为 1.0.3（62）。
 
-本次修复特定握手连接重置导致的提前阻断，并修复应用内更新的服务交接。保留脱敏诊断日志，便于反馈间歇性故障。持续失败、出口不符、授权失效与证书错误仍会阻断连接。
+新增通过本机 Clash SOCKS5 入口连接住宅固定出口的方式，固定出口失败时不改用前置 IP。修复 Claude Code 设置变化后的配置卡住问题，保留其它偏好与私有恢复记录。保留脱敏诊断日志。
 
 ### 安装与激活
 
@@ -16,6 +16,14 @@
 4. 在「本机状态 → 查看保护检查」核对组件与应用设置，再检查实际连接。
 
 Mac 客户版自带保护组件，无需另装 LuLu。请使用安装包附件；Source code 不是安装包。
+
+### 使用本机 Clash 前置
+
+在「我的连接 → 更多连接设置」打开「使用前置连接」，选「本机 SOCKS5」，填写 Clash 的 SOCKS5 端口（例如 7897，地址固定为 127.0.0.1）。上方仍填写原住宅代理及原固定出口 IP，检测通过后再应用。
+
+本机前置目前搭配 HTTP／SOCKS5 固定出口，不支持 HTTPS 类型的第二跳代理。Clash 须保持运行；助手不会停用它或 TUN。固定出口失效时专用请求失败，不用前置节点作为备用出口。无需向助手导出 Clash 节点密码。
+
+若 CC 仍显示待配置，先保存并结束 CC 任务，再在「本机状态 → 查看保护检查」点击「完成 Claude Code 设置」。第三方启动器冲突仍需按提示处理。
 
 ### 软件更新与日志反馈
 
@@ -29,17 +37,17 @@ Mac 客户版自带保护组件，无需另装 LuLu。请使用安装包附件�
 
 ### 验证范围与限制
 
-本台已验证升级、保护组件版本、Chrome 固定出口、Claude 桌面端与 CC 真实回复，以及退出助手后的联网、专用服务停止时的新请求阻断与恢复。测试保留了本台现有 LuLu 和 Clash TUN。
+已通过本机隔离回归：前置存活而出口失败、异常握手、前置停止、关闭既有连接、重新核验后恢复与独立到期关闭，以及 CC 定向修复与偏好保留。208 项核心回归、签名、公证、最终归档和隔离的 1.0.2→1.0.3 签名更新均已通过；隔离安装后的文件与正式包一致，测试资料保留。
 
-**上游持续超时、供应商限制与其他 AnyTLS 兼容问题尚未确认解决。** 此次修复覆盖特定连接重置的处理，不能保证所有供应商线路恢复稳定。
+**客户实际 Clash 节点、住宅供应商与公司网络环境尚未确认解决。** 新版未替换本台日常安装；测试保留当前固定出口、Clash TUN 与 LuLu。
 
-**客户设备、登录／整机重启恢复、多个人资料与完整防旁路矩阵的完整验收尚未全部完成。** 配置匹配、签名公证和本台测试不能代替客户环境验收；公司管理策略如需调整，应由公司 IT 核实。
+**客户设备、逐应用真实出口、登录／重启恢复、多个人资料与完整防旁路矩阵的完整验收尚未全部完成。** 配置匹配和自动回归不能替代客户环境验收；公司管理策略如需调整，应由公司 IT 核实。
 
-代理能否多设备同时使用取决于供应商规则。请勿公开卡密、密码和完整代理配置。v1.0.0、v1.0.1 保留为历史发布，旧 GitHub 内测版本已退役。
+代理能否多设备同时使用取决于供应商规则。请勿公开卡密、密码和完整代理配置。v1.0.0、v1.0.1、v1.0.2 保留为历史发布，旧 GitHub 内测版本已退役。
 
 ## Windows 内测
 
-Windows 继续保持 **0.5.30 内测**，本次没有发布 Windows 1.0.2。
+Windows 继续保持 **0.5.30 内测**，本次没有发布 Windows 1.0.3。
 
 [下载 Windows 10/11 x64 内测安装器](https://shop.cegr.si/downloads/cegr/windows/preview/0.5.30/CEGR-AI-Assistant-v0.5.30-for-Windows-10-11-x64-Setup.exe) · [校验值](https://shop.cegr.si/downloads/cegr/windows/preview/0.5.30/SHA256SUMS.txt)
 
