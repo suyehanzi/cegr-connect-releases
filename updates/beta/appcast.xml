@@ -4,48 +4,47 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.5</title>
-            <pubDate>Fri, 09 Oct 2026 21:22:44 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.5</link>
+            <title>1.0.6</title>
+            <pubDate>Sat, 10 Oct 2026 22:14:58 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.6</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>64</sparkle:version>
-            <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
+            <sparkle:version>68</sparkle:version>
+            <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 1.0.5
+            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 1.0.6
 
-适用于 Apple 芯片 Mac，macOS 14 或更新版本。主程序与保护组件：1.0.5（64）。Windows 保持 0.5.30 内测。
+适用于 Apple 芯片 Mac，macOS 14 或更新版本。主程序和保护组件构建号为 68，已完成 Developer ID 签名和 Apple 公证。
 
-## 本次更新
+- 改善专用连接重新核验时的连续性：按顺序处理网络变化、取消过期检查，并在短暂复验期间有界暂停转发。检查失败、出口不符或授权到期仍阻断，不开启直连或前置出口兜底。
+- 修复 AnyTLS 排队握手在暂停期间提前写出的问题，以及慢速接收、取消后复用造成的停读问题；保留原固定出口与 TLS 证书检查。
+- 日志区分出口检查、实际转发和路径变化，保留事件时间；修复日志保存窗口及返回状态页的刷新问题。
+- 核对 Claude 桌面端实际版本，旧版或版本未知时给出处理提示；完善 Claude Code 更新后的受保护入口。配置匹配不再表述为实际保护已通过。
+- 新设置默认选择浏览器英文，可切换繁体中文或保持原样；英文地区格式由本人在系统设置确认。保留原有语言选择，不自动更改系统时区。
+- 默认清理范围包含缓存、登录数据和 CC 本地历史。**升级后新老用户都须重新核对语言与清理范围；确认偏好不会执行清理。实际清理前仍需查看清单并二次确认，会退出相关账号，旧 CC 会话无法直接续接。** 不自动删除真实数据，旧浏览器清理助手需重新获取后由本人加载。
 
-在「本机状态」底部新增默认折叠的「高级设置」，将「解除保护／恢复原配置」放在其中。操作前展示解除风险、退出应用与移除本次描述文件的步骤，并提供设备管理入口；执行前再次确认。
+更新前请保存工作并正常退出所选应用。更新保留账号、连接和偏好；安装后若提示保护组件待更新，请在「本机状态 → 查看保护检查」完成更新。保持现有 Clash/TUN 设置。
 
-**解除会影响本次安装中的全部受保护应用。完成后，CEGR 不再保证这些应用的固定出口或断网保护；误开浏览器、Claude 桌面端或 CC 时，可能使用其他出口。** 若仅需临时停止连接，请使用「诊断与维护 → 暂停连接」，保留应用保护。
+## 本轮验证
 
-恢复失败会明确提示未完成，并要求处理后重试。后来改动过的文件仍会保留，不将有待核对的恢复结果显示为全部完成。
+本台最终 1.0.6（68）完成 20 分钟连续观察，120 次请求全部成功，出口始终匹配；期间 12 次路径复验未出现受测请求失败。另一次约 128 秒的 2 MiB 慢速传输跨越 4 次路径复验，完整接收。Chrome 访客窗口、Claude 桌面端和受保护启动器内的 CC 最小请求、正常退出助手后的使用，以及 CEGR 服务暂停时的新请求失败与恢复均已核对。原固定出口、Clash TUN 和应用保护保留。
 
-本次仅调整入口、确认和反馈，不改连接服务、过滤器与配置恢复后端。保留 1.0.4 的本机 SOCKS5 认证确认、固定出口失败不兜底、CC 设置修复及诊断日志。
+242 项核心检查与全 Swift 编译、40 项 Windows 对应 Node 检查通过；签名、公证、实际日志保存，以及正式 1.0.5（64）和候选 67 到 68 的隔离签名升级通过。Windows 原生设备测试仍待完成。
 
-## 更新与反馈
+## 范围与限制
 
-打开「更多工具 → 软件更新」，下载并确认安装；也可下载本页 ZIP 手动覆盖。更新前保存工作。升级保留原账号、连接记录、偏好和权益；不要为升级点击「解除保护／恢复原配置」。若提示更新保护组件，请保存并退出所选应用，按助手和 macOS 提示完成。
+本次按本台稳定性与指定应用复验范围交付。**所有客户线路、公司网络、浏览器个人资料、睡眠／重启恢复及完整防旁路矩阵的完整验收尚未全部完成。** 本台保留 LuLu，不能将本台阻断结果归因于 CEGR 过滤器单独生效。公司管理软件是否冲突、供应商线路是否有独立故障仍须在对应设备核验，不以配置全绿或页面能打开作保证。
 
-遇到问题时，在「本机状态 → 导出诊断日志」保存日志，并反馈发生时间、应用和具体现象。日志不会自动上传。
+遇到问题请导出脱敏诊断日志，附发生时间、应用和表现；无需发送密码、令牌或完整代理配置。
 
-## 验证范围
-
-209 项核心回归、Mac 完整构建及原生高级设置界面预览通过。Developer ID 签名、Apple 公证、最终 ZIP 解压校验和隔离的 1.0.4→1.0.5 签名更新已核验；隔离安装后的文件与候选一致，合成测试资料保留。
-
-本轮未在日常使用的电脑上执行真实解除保护或替换安装，保留现有固定出口、Clash TUN 和 LuLu。**客户设备上的实际解除与恢复、逐应用出口、登录／重启恢复及完整防旁路矩阵的完整验收尚未全部完成。** 编译、界面预览和自动检查不能替代客户设备验收。此前客户线路中的间歇 TLS／上游连接故障尚未确认解决，本更新不宣称修复这些故障。
-
-Windows 本次未更新，配置撤销／恢复尚未集成到 Windows 客户版。历史正式版本保留。
+Windows 继续保持 0.5.30 内测，本次不发布 Windows 1.0.6。历史正式版本保留。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.5/CEGR-AI-Assistant-v1.0.5-for-macOS-arm64.zip" length="4597339" type="application/octet-stream" sparkle:edSignature="+KNfB17EsDBDSQqEv3lfcInGEo9GEKreIR8useM9gxpCo8j8F1UstokLUngjRrv8R+qCtZ8kDNUhRojKb7BhDA=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.6/CEGR-AI-Assistant-v1.0.6-for-macOS-arm64.zip" length="4749374" type="application/octet-stream" sparkle:edSignature="dl5fJdxSd7i6EjUVYgjYzcVBeW16ZgTWuGOFY7oB6a6KTjVDmdeC7rCSuHuVxkDIYwjbVzUtBJRwnqjne11sCQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 3DHQCIbXy00QNQ4ASuoDQ3k5moilZxFrhbaoDQfG2ASxrH+2ojdh5D/Y/OZQAeZdMgxg74vocRia9UVPvox+BA==
-length: 3996
+edSignature: AQVbA19lyPstYzT6x07GvB1nCtWBen+y55Mz7//RLXRrR2ONHqsRvvo4t6maBGK7novUdNGFiWeLrUe0qf1NDg==
+length: 4646
 -->
