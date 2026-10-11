@@ -4,38 +4,37 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.7</title>
-            <pubDate>Sun, 11 Oct 2026 18:41:12 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.7</link>
+            <title>1.0.8</title>
+            <pubDate>Mon, 12 Oct 2026 01:01:10 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.8</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>71</sparkle:version>
-            <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
+            <sparkle:version>72</sparkle:version>
+            <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 1.0.7
+            <description sparkle:format="markdown"><![CDATA[## 橙格 · AI 环境助手 1.0.8
 
-适用于 Apple 芯片 Mac，macOS 14 或更新版本。主程序与保护组件均为 **1.0.7（71）**，安装包已通过 Developer ID 签名和 Apple 公证。
+- 前置连接、固定出口及应用范围更容易找到，补充填写与确认提示。
+- 配置后增加浏览器实际访问检查入口及故障反馈，便于确认网页能否使用。
+- 修复点击“暂不处理”后同一版本反复弹出语言与清理提醒；保留主动核对入口。
+- 确认勾选框固定在弹窗底部，应用配置失败提示更明显。
 
-- 加强专用连接的本机访问保护。
-- 完善保护组件实际运行状态的核对与提示。
-- 保留现有账号、连接、固定出口和偏好，升级不消耗新卡密。
+### 使用提醒
 
-**先更新，再配置：** 已有用户在「更多工具 → 软件更新」下载安装；更新前保存工作。更新后进入「本机状态 → 查看保护检查」，按提示正常退出所选应用并更新保护组件，确认实际启用版本为 1.0.7（71），再完成应用配置和连接检查。Clash/TUN 保持原有设置。
+**先更新，再配置。** 更新前保存工作并正常退出相关应用，按提示更新主程序和保护组件。升级保留现有连接及偏好；暂缓确认不会执行清理，实际清理仍需单独确认。Windows 下载与更新保持原状。
 
-新用户下载本页 ZIP，解压后将应用放入「应用程序」，按向导配置。若旧版提示“连接服务尚未完成交接”，请按[安装与升级说明](https://github.com/suyehanzi/cegr-connect-releases#安装与升级)手动覆盖；不要为更新解除保护或清空数据。Claude Code 请使用助手提供的受保护启动入口。
+本版已在本台完成连续连接观察、指定应用请求、专用连接中断与恢复，以及暂缓弹窗复验。本台保留了其他网络安全软件，不能视为 CEGR 单独保护的完整验收。不同客户线路、睡眠／重启及完整保护范围仍需设备验收；配置全绿不等于所有应用已经验证。
 
-升级后如出现语言与清理范围提示，请本人重新核对。确认偏好不会执行清理；实际清理仍需二次确认，清理登录数据后需重新登录，清理 CC 本地历史后旧会话无法直接续接。
+部分客户反馈的间歇连接失败仍在排查，本版不宣称已经解决。返回状态页时可能短暂显示旧结果，随后自动刷新；若持续异常，请保留当前连接，导出诊断日志并附发生时间反馈。
 
-本版已通过本台连接稳定性、指定应用的断网与恢复及本机访问隔离测试。不同客户线路、公司环境、全部应用资料、睡眠／重启及完整防旁路保护仍需设备验收；本台保留了其他网络安全软件，不能视为 CEGR 单独保护的完整验收。**界面全绿或一次出口正确不代表完整保护验收通过。**
-
-异常请使用「本机状态 → 导出诊断日志」，附版本、时间和现象，通过原订单联系客服；不要公开密码或完整代理资料。Windows 继续内测，本次仅发布 Mac。
+适用于 Apple 芯片 Mac，macOS 14 或更新版本。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.7/CEGR-AI-Assistant-v1.0.7-for-macOS-arm64.zip" length="4815085" type="application/octet-stream" sparkle:edSignature="VWOec0gQofGaED5L0YdtX8ZSfO0l3hAEivszPliapmgSU/VUsnLYBJvCiMXwP0+VPtcknD6YhpP7X5xI+cXrAg=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.8/CEGR-AI-Assistant-v1.0.8-for-macOS-arm64.zip" length="4842881" type="application/octet-stream" sparkle:edSignature="m1wLRpchAVcIVSm3DW5LsAJdZi9F260svgNYs9ErHzpbK+i5itEiNWJ9LsY8szHugaTzgSeIMa0gUM+hUkc/CQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: gupwhWUehdxpHOlVRXSef6j7SaKbHEH80cLS7YeTW2NwR/3yWjDxeBndKQHtAsFu100wcQMQiPmwASaC4MbhCA==
-length: 3428
+edSignature: Lm6emJR3fSeLTstnWvzQumKUOLuzEYq9XztQl6TTnHui4nfqxtVw3ItjzCdpim5GvkSGvtZ+OPwpd26qXTqbAg==
+length: 2844
 -->
