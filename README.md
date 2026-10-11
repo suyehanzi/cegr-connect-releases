@@ -56,10 +56,16 @@ Clash 须保持运行，助手不会停用它或 TUN。固定出口失效时，�
 
 ## Windows 内测
 
-Windows 保持 **0.5.30 内测**，本次未发布 Windows 1.0.7。
+Windows **0.5.34 内测版**现已开放下载，适用于 **Windows 10/11 x64**，供安排的设备参与测试。Mac 正式版仍为 1.0.7。
 
-[下载 Windows 10/11 x64 内测安装器](https://shop.cegr.si/downloads/cegr/windows/preview/0.5.30/CEGR-AI-Assistant-v0.5.30-for-Windows-10-11-x64-Setup.exe) · [校验值](https://shop.cegr.si/downloads/cegr/windows/preview/0.5.30/SHA256SUMS.txt)
+**[下载 Windows 0.5.34 内测包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.34/CEGR-AI-Assistant-v0.5.34-for-Windows-10-11-x64.zip)** · [版本说明与校验值](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.34)
 
-完整应用保护、防旁路、配置恢复及同类持续诊断日志尚未全部集成；客户 Windows 10/11 设备仍需验收。安装器尚无发布者签名，遇到系统拦截请保留提示联系客服，不要关闭系统安全保护。
+本版改善连接稳定性、应用设置与诊断反馈，加强专用连接的本机访问保护。已有用户可检查软件更新；无法更新时，从上方下载后使用原 Windows 账户覆盖安装。保存工作并正常退出环境助手及所选应用，保留原 IP、连接资料、Clash/TUN 和安全保护，不先卸载或清理数据。按提示更新实际保护组件，再核对出口及各应用；Claude Code 使用助手提供的受保护入口。
+
+升级后按提示重新核对语言与清理范围；确认偏好不会删除数据，实际清理仍须二次确认，本轮内测无需清理真实数据。
+
+**安装器尚无 Windows 发布者签名。** 更新清单签名及校验值不等于发布者签名。遇到系统或公司策略拦截，请保留提示联系支持，不关闭安全软件。
+
+客户设备、真实线路、睡眠与重启恢复仍待内测，配置检查通过不能替代实际应用与断网保护验收。云电脑重启、注销或断流测试前须确认有可用的恢复入口；WSL、共享 Node、自定义入口及其他虚拟环境的保护覆盖需另行确认。异常时导出脱敏日志，附版本、时间、应用和操作，通过原支持渠道反馈。
 
 本仓库提供安装包、使用说明、更新信息和校验值，不包含项目源码或客户资料。
