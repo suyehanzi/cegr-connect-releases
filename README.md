@@ -1,16 +1,10 @@
 # 橙格 · AI 环境助手
 
-**[下载 Mac v1.0.8](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.8/CEGR-AI-Assistant-v1.0.8-for-macOS-arm64.zip)** · [版本说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.8) · [历史版本](https://github.com/suyehanzi/cegr-connect-releases/releases)
+**[下载 Mac v1.0.9](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.9/CEGR-AI-Assistant-v1.0.9-for-macOS-arm64.zip)** · [版本说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.9) · [历史版本](https://github.com/suyehanzi/cegr-connect-releases/releases)
 
-适用于 **Apple 芯片 Mac，macOS 14 或更新版本**。安装包已通过 Developer ID 签名和 Apple 公证，主程序与保护组件为 1.0.8（72）。
+适用于 **Apple 芯片 Mac，macOS 14 或更新版本**。安装包已通过 Developer ID 签名和 Apple 公证，主程序与保护组件为 1.0.9（73）。
 
-本版让前置连接、固定出口和应用范围更容易找到，增加实际浏览器访问检查与故障反馈，并修复“暂不处理”后同版本反复弹窗。
-
-## Mac 1.0.9 手动内测
-
-[下载内测包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.9/CEGR-AI-Assistant-v1.0.9-for-macOS-arm64.zip) · [内测说明与校验值](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.9)
-
-改善已有策略冲突的提示，避免反复安装，并方便分别检查已匹配应用。真实设备升级与使用仍需验收；公司 DNS 策略冲突不会自动解决。正式自动更新仍为上方 1.0.8，Windows 更新保持不变。
+本版改善已有策略冲突的提示，避免反复引导安装；已匹配应用可以分别检查实际访问，诊断状态如实记录。公司 DNS 策略冲突仍需配置管理者处理，本版不会自动改写或移除组织策略。
 
 ## 安装与升级
 
@@ -18,7 +12,7 @@
 2. 按助手提示登录、兑换卡密、导入自己的代理连接，完成系统授权及应用设置。系统密码由本人输入，Mac 客户版无需另装 LuLu。
 3. 在「本机状态 → 检查应用实际联网」核对设置，再检查所选应用的实际连接。Claude Code 请使用助手提供的受保护启动入口。
 
-**先更新，再配置。** 已有用户可在「更多工具 → 软件更新」下载安装。**升级保留账号、连接和偏好，不消耗新卡密。** 更新前保存工作；若提示更新保护组件，请正常退出所选应用，按助手与 macOS 提示完成。在「本机状态 → 检查应用实际联网」确认系统实际启用组件为 **1.0.8（72）**，再完成应用配置和实际连接检查；只更新主程序不代表保护组件已经更新。保持原有 Clash/TUN 设置。
+**先更新，再配置。** 已有用户可在「更多工具 → 软件更新」下载安装。**升级保留账号、连接和偏好，不消耗新卡密。** 更新前保存工作；若提示更新保护组件，请正常退出所选应用，按助手与 macOS 提示完成。在「本机状态 → 检查应用实际联网」确认系统实际启用组件为 **1.0.9（73）**，再完成应用配置和实际连接检查；只更新主程序不代表保护组件已经更新。保持原有 Clash/TUN 设置。
 
 若 1.0.0／1.0.1 提示“连接服务尚未完成交接”，请使用上方 ZIP 手动覆盖一次；早于 0.5.30 的版本也需手动安装。手动覆盖前，先在旧助手暂停专用连接并正常退出助手，安装后按提示恢复连接。不要为升级清空数据、卸载描述文件或点击「解除保护／恢复原配置」。
 
@@ -56,7 +50,7 @@ Clash 须保持运行，助手不会停用它或 TUN。固定出口失效时，�
 
 ## 使用范围与反馈
 
-本版已在本台完成连续连接观察、指定应用请求、专用连接中断与恢复及暂缓弹窗复验；不同客户线路、公司网络、多浏览器个人资料、睡眠／重启恢复及完整断网、防旁路保护仍未全部验收。本台测试保留了其他网络安全软件，不能视为 CEGR 单独保护的完整验收。**设置全绿、页面能打开或一次出口正确，不等于完整保护验收通过。**
+本包已通过签名、公证、隔离升级与下载完整性检查；真实设备升级、不同客户线路、公司网络、多浏览器个人资料、睡眠／重启恢复及完整断网、防旁路保护仍需实际验收。既往版本的本台测试不能代替本版完整保护验收。**设置全绿、页面能打开或一次出口正确，不等于完整保护验收通过。**
 
 部分客户反馈的间歇连接失败仍在排查，本版不宣称已经解决。返回状态页时可能短暂显示旧结果并随后自动刷新；若持续异常，请导出日志并附发生时间反馈。
 
@@ -66,7 +60,7 @@ Clash 须保持运行，助手不会停用它或 TUN。固定出口失效时，�
 
 ## Windows 内测
 
-Windows **0.5.34 内测版**现已开放下载，适用于 **Windows 10/11 x64**，供安排的设备参与测试。Mac 正式版仍为 1.0.8。
+Windows **0.5.34 内测版**现已开放下载，适用于 **Windows 10/11 x64**，供安排的设备参与测试。Mac 正式版仍为 1.0.9。
 
 **[下载 Windows 0.5.34 内测包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.34/CEGR-AI-Assistant-v0.5.34-for-Windows-10-11-x64.zip)** · [版本说明与校验值](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.34)
 

@@ -4,37 +4,28 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.8</title>
-            <pubDate>Mon, 12 Oct 2026 01:01:10 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.8</link>
+            <title>1.0.9</title>
+            <pubDate>Thu, 15 Oct 2026 12:09:31 +0800</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.9</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>72</sparkle:version>
-            <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
+            <sparkle:version>73</sparkle:version>
+            <sparkle:shortVersionString>1.0.9</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## 橙格 · AI 环境助手 1.0.8
+            <description sparkle:format="markdown"><![CDATA[# Mac 1.0.9
 
-- 前置连接、固定出口及应用范围更容易找到，补充填写与确认提示。
-- 配置后增加浏览器实际访问检查入口及故障反馈，便于确认网页能否使用。
-- 修复点击“暂不处理”后同一版本反复弹出语言与清理提醒；保留主动核对入口。
-- 确认勾选框固定在弹窗底部，应用配置失败提示更明显。
+改善应用设置检查：遇到已有策略冲突时，直接显示需要核对的项目，避免反复引导安装。已匹配应用可以分别检查实际访问；配置尚未完成时，诊断记录会如实标记。
 
-### 使用提醒
+已有用户可在助手内检查并安装更新。更新前请保存工作，按提示正常退出相关应用；保留原连接、Clash/TUN 和保护，更新后核对实际保护组件及所选应用的真实使用。
 
-**先更新，再配置。** 更新前保存工作并正常退出相关应用，按提示更新主程序和保护组件。升级保留现有连接及偏好；暂缓确认不会执行清理，实际清理仍需单独确认。Windows 下载与更新保持原状。
-
-本版已在本台完成连续连接观察、指定应用请求、专用连接中断与恢复，以及暂缓弹窗复验。本台保留了其他网络安全软件，不能视为 CEGR 单独保护的完整验收。不同客户线路、睡眠／重启及完整保护范围仍需设备验收；配置全绿不等于所有应用已经验证。
-
-部分客户反馈的间歇连接失败仍在排查，本版不宣称已经解决。返回状态页时可能短暂显示旧结果，随后自动刷新；若持续异常，请保留当前连接，导出诊断日志并附发生时间反馈。
-
-适用于 Apple 芯片 Mac，macOS 14 或更新版本。
+本版不会自动改写或移除组织策略，公司 DNS 策略冲突仍需配置管理者处理。不同设备及安全软件组合仍需实际验收，本次不宣称已解决所有断流或超时。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.8/CEGR-AI-Assistant-v1.0.8-for-macOS-arm64.zip" length="4842881" type="application/octet-stream" sparkle:edSignature="m1wLRpchAVcIVSm3DW5LsAJdZi9F260svgNYs9ErHzpbK+i5itEiNWJ9LsY8szHugaTzgSeIMa0gUM+hUkc/CQ=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.9/CEGR-AI-Assistant-v1.0.9-for-macOS-arm64.zip" length="4849385" type="application/octet-stream" sparkle:edSignature="F5HhUGI49Wxrrydo6GYswiViQS5n4kH0lsxm47LlDyyCNRkG/YQsSDG7WpY0Yj2euIRXD7m4ccbU4VIXOAzcCg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: Lm6emJR3fSeLTstnWvzQumKUOLuzEYq9XztQl6TTnHui4nfqxtVw3ItjzCdpim5GvkSGvtZ+OPwpd26qXTqbAg==
-length: 2844
+edSignature: rU8wXed5L6ertOCLxhbDHEsYc21p4ThGwnadQhYY9jT0ceIM77yTWKS1dlD4ig5c76ZaEipjVQPEq1WdfEV5Aw==
+length: 2164
 -->
