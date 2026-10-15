@@ -6,6 +6,12 @@
 
 本版让前置连接、固定出口和应用范围更容易找到，增加实际浏览器访问检查与故障反馈，并修复“暂不处理”后同版本反复弹窗。
 
+## Mac 1.0.9 手动内测
+
+[下载内测包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.9/CEGR-AI-Assistant-v1.0.9-for-macOS-arm64.zip) · [内测说明与校验值](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.9)
+
+改善已有策略冲突的提示，避免反复安装，并方便分别检查已匹配应用。真实设备升级与使用仍需验收；公司 DNS 策略冲突不会自动解决。正式自动更新仍为上方 1.0.8，Windows 更新保持不变。
+
 ## 安装与升级
 
 1. 下载 ZIP 并解压，将应用放入“应用程序”。`Source code` 不是安装包；`SHA256SUMS.txt` 用于校验下载完整性。
