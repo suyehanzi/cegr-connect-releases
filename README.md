@@ -10,7 +10,9 @@
 
 Windows 仍使用手动内测版本，本次 Mac 正式更新不会改变 Windows 更新源：
 
-- [Windows 0.5.47 内测包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.47/CEGR-AI-Assistant-v0.5.47-for-Windows-10-11-x64.zip) · [说明与校验值](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.47)
+- [Windows 0.5.48 内测包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v0.5.48/CEGR-AI-Assistant-v0.5.48-for-Windows-10-11-x64.zip) · [说明与校验值](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v0.5.48)
+
+本次内测改善短时 DNS 超时和网络重验时的连接恢复，保留原 IP 与应用保护，不需要关闭网卡 IPv6。
 
 Windows 原自动更新通道仍为 0.5.34。客户原线路、睡眠唤醒和完整应用保护继续验收，安装器尚无发布者签名。保留原 IP、连接资料及保护，不先卸载、清理或移除公司策略。
 
@@ -76,7 +78,7 @@ Clash 须保持运行，助手不会停用它或 TUN。固定出口失效时，�
 
 ## Windows 内测
 
-Windows **0.5.47 手动内测版**适用于 **Windows 10/11 x64**。下载与说明见上方「新版手动内测」；原自动更新通道暂保持 0.5.34。主程序版本不代表实际保护组件已更新，请在完成配置后核对组件、后台和原固定出口。
+Windows **0.5.48 手动内测版**适用于 **Windows 10/11 x64**。下载与说明见上方「新版手动内测」；原自动更新通道暂保持 0.5.34。主程序版本不代表实际保护组件已更新，请在完成配置后核对组件、后台和原固定出口。
 
 使用原 Windows 账户覆盖安装，保留 IP、连接资料、Clash/TUN 和保护，不先卸载或清理。Claude Code 使用助手提供的受保护入口。语言与清理偏好确认不会删除数据，实际清理仍须二次确认，本轮内测无需清理真实数据。
 
