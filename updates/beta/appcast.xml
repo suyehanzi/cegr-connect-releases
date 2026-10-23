@@ -4,43 +4,44 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.14</title>
-            <pubDate>Fri, 23 Oct 2026 08:10:40 -0600</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.14</link>
+            <title>1.0.15</title>
+            <pubDate>Fri, 23 Oct 2026 08:53:45 -0600</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.15</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>84</sparkle:version>
-            <sparkle:shortVersionString>1.0.14</sparkle:shortVersionString>
+            <sparkle:version>85</sparkle:version>
+            <sparkle:shortVersionString>1.0.15</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# macOS 1.0.14（84）
+            <description sparkle:format="markdown"><![CDATA[# macOS 1.0.15（85）
 
-适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。现有 Mac 客户端可在「软件更新」中检查、确认安装；本次不更新 Windows。
+适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
 
-## 本次更新
+## 自动识别 Clash 入口
 
-- 新增「复用 Clash 当前出口」接入方式。使用已确认的本机 SOCKS5 或混合端口，无需重复填写远端节点账号密码。
-- 首次检测后明确确认固定出口，再次核验通过才保存；不自动接受变化后的 IP。
-- Clash 模式区分单个目标的连接失败和本机入口故障：单个网站重置连接、写入失败或正常 SOCKS 拒绝只结束该请求；本机入口连接失败或握手无效会撤销旧许可，恢复前重新核验。
-- 出口确认与具体端口、IP 和安装记录绑定，避免沿用已经过期的确认。
+选择「复用 Clash 当前出口」，点击「自动识别并核对出口」。助手会读取受支持的 Clash Verge 本机运行接口，核对进程身份、实际端口及 SOCKS5 协议，再检查当前出口。
 
-## 更新和试用说明
+- 正常情况下无需查找或手填端口、IP、节点账号密码。
+- 若能明确识别系统当前使用的入口，会优先沿用；无法区分多个入口时列出选择，不随意猜测端口。
+- 已有固定出口继续使用原 IP 作比较，不会自动接受新的 IP。首次设置仍需本人确认检测结果，确认后再次检测才保存。
+- 检测前后会重新核对 Clash 进程、端口及选路状态；状态变化、出口不符、接口无法确认时停止保存，保留原连接。
+- 直连或自动切换节点不作为固定节点直接保存。手动填写保留在备用选项中。
 
-更新不会自动切换已保存的线路，也不会自动创建或修改 Clash 节点、规则、TUN 和系统代理。安装前保存工作并正常退出受保护应用；保留原 IP 和断网保护，按应用向导完成需要的组件确认。
+识别过程不读取订阅或节点配置文件，不索取节点密码，不修改 Clash 节点、规则、模式、TUN 或断网保护，也不自动创建新的 Clash 监听入口。
 
-复用 Clash 属于本次新增试用能力。规则模式和全局模式的专用固定入口已通过隔离组合测试，但客户机仍需配置并核对绑定固定节点的入口，尚不支持自动完成这一步。普通混合端口可能分流，两个查 IP 请求不能证明 Claude 等所有目标始终使用相同出口；周期检测也不等于对上游变化的即时阻断。这不是 Claude 账号的服务端 IP 白名单。
+## 使用与范围
 
-现有独立代理用户可继续使用原接入方式。试用遇到配置失败、出口不符或无法连接时，保留现场并导出诊断日志，不要反复重装、切换 IP 或关闭保护。
+更新前保存工作并正常退出受保护应用，按助手提示完成组件更新。更新不会自动切换已保存线路；请继续保留原 IP 和保护。
 
-## 已验证范围
+规则模式下，各应用可能采用不同路线。两个检测来源一致，只证明本次检查的出口；固定节点入口、应用真实路线和长期稳定性仍需核验。此功能不是账号服务端 IP 白名单，也不保证对远端出口变化即时阻断。
 
-Debug 与 Release 各 331 项核心检查、10 项本机 SOCKS 重点检查、独立 Mihomo v1.19.32 的 Rule/Global 组合测试、Apple 签名公证及 1.0.13（83）→1.0.14（84）隔离升级已通过。完整客户设备、实际应用与长期稳定性仍待现场验收。
+已通过 Debug／Release 各 340 项核心检查、实际本机只读识别与状态复核、独立 Mihomo 模式检查、Apple 签名公证及 1.0.14 → 1.0.15 隔离升级。Windows 本次不变。异常时请保留现场并导出诊断日志，不要反复重装、换 IP 或关闭保护。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.14/CEGR-AI-Assistant-v1.0.14-for-macOS-arm64.zip" length="5054424" type="application/octet-stream" sparkle:edSignature="80sm38z7cW8XYI2nrws94Rsbhg7NKGA5ryA7JztyRuAh6MesDFNffv7eSV7cbgp0sAcz3nJNH/jU+c198uj3Dg=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.15/CEGR-AI-Assistant-v1.0.15-for-macOS-arm64.zip" length="5144905" type="application/octet-stream" sparkle:edSignature="ZdFC3IFpw+97sA6ugiceEKxC56PqT/Es3PF6doJrPdulBUEOu/I7ICdPUEWW0/oGJQ7RpLlCl/NLEIZHIiXcBA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 1Kv5A4K372TiZEAh4EhKqbV2UqpWjWDo6OGfCsq44F+aWUHM5N6ggcVs08l2t0ZdRYt0CkQyop1yeTkFK6MLCQ==
-length: 3542
+edSignature: WXD2EFMQZXNmyoltwVdkkcKartKZcGLNL499MhzKeopsmIWkckdAdhoM2jPe3ac798CLlz9+kFstmCp7VTK4Dg==
+length: 3437
 -->
