@@ -4,32 +4,43 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.13</title>
-            <pubDate>Wed, 21 Oct 2026 09:00:22 +0800</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.13</link>
+            <title>1.0.14</title>
+            <pubDate>Fri, 23 Oct 2026 08:10:40 -0600</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.14</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>83</sparkle:version>
-            <sparkle:shortVersionString>1.0.13</sparkle:shortVersionString>
+            <sparkle:version>84</sparkle:version>
+            <sparkle:shortVersionString>1.0.14</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# 橙格 · AI 环境助手 1.0.13 · macOS
+            <description sparkle:format="markdown"><![CDATA[# macOS 1.0.14（84）
 
-改善固定出口连接在 DNS 超时、链路质量变化后的恢复行为；原线路仍须通过出口核验，可用通路未确认时继续保持阻断。
+适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。现有 Mac 客户端可在「软件更新」中检查、确认安装；本次不更新 Windows。
 
-对于已有组织策略强制关闭 Chrome 加密 DNS 的电脑，增加单独确认的兼容选项。助手只替换自身描述文件中的 Chrome DNS 设置，保留固定代理、原出口和断网保护，不修改组织描述文件。此模式下 Chrome DNS 由已有策略管理，CEGR 不保证其加密或隐私；默认配置不会自动切换为此模式。
+## 本次更新
 
-安装文件打开后，助手会等待 macOS 确认新的 CEGR 配置版本；取消、安装中断和仍有策略冲突时会保留待处理状态，不再把旧配置误判为更新成功。配置匹配与实际联网验收分别显示。
+- 新增「复用 Clash 当前出口」接入方式。使用已确认的本机 SOCKS5 或混合端口，无需重复填写远端节点账号密码。
+- 首次检测后明确确认固定出口，再次核验通过才保存；不自动接受变化后的 IP。
+- Clash 模式区分单个目标的连接失败和本机入口故障：单个网站重置连接、写入失败或正常 SOCKS 拒绝只结束该请求；本机入口连接失败或握手无效会撤销旧许可，恢复前重新核验。
+- 出口确认与具体端口、IP 和安装记录绑定，避免沿用已经过期的确认。
 
-升级前请保存并正常退出 Chrome、Claude 桌面端及正在运行的 Claude Code 任务，再在「软件更新」中检查更新。原有连接和用户数据保留。只有主动选择 DNS 兼容方案时，才需要按界面提示在系统设备管理中确认替换 CEGR 描述文件。
+## 更新和试用说明
 
-本次仅更新 macOS 版本；Windows 版本及其更新源保持不变。适用于当前发布包支持的 Apple 芯片 Mac（macOS 14 或更新版本）。组织 DNS 策略不符合兼容条件、残留 DNS 模板或其他应用策略冲突时，助手仍会明确提示未完成，需要继续核对具体项目。
+更新不会自动切换已保存的线路，也不会自动创建或修改 Clash 节点、规则、TUN 和系统代理。安装前保存工作并正常退出受保护应用；保留原 IP 和断网保护，按应用向导完成需要的组件确认。
+
+复用 Clash 属于本次新增试用能力。规则模式和全局模式的专用固定入口已通过隔离组合测试，但客户机仍需配置并核对绑定固定节点的入口，尚不支持自动完成这一步。普通混合端口可能分流，两个查 IP 请求不能证明 Claude 等所有目标始终使用相同出口；周期检测也不等于对上游变化的即时阻断。这不是 Claude 账号的服务端 IP 白名单。
+
+现有独立代理用户可继续使用原接入方式。试用遇到配置失败、出口不符或无法连接时，保留现场并导出诊断日志，不要反复重装、切换 IP 或关闭保护。
+
+## 已验证范围
+
+Debug 与 Release 各 331 项核心检查、10 项本机 SOCKS 重点检查、独立 Mihomo v1.19.32 的 Rule/Global 组合测试、Apple 签名公证及 1.0.13（83）→1.0.14（84）隔离升级已通过。完整客户设备、实际应用与长期稳定性仍待现场验收。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.13/CEGR-AI-Assistant-v1.0.13-for-macOS-arm64.zip" length="5020697" type="application/octet-stream" sparkle:edSignature="Oipmh1kss0dVgjB6qYsYNj7NCRA0QraOAtQWHCJRYcntE7fBYjD8/g8BJ4l2xH9r9HfurHcCd1l1OPPA9wxRBg=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.14/CEGR-AI-Assistant-v1.0.14-for-macOS-arm64.zip" length="5054424" type="application/octet-stream" sparkle:edSignature="80sm38z7cW8XYI2nrws94Rsbhg7NKGA5ryA7JztyRuAh6MesDFNffv7eSV7cbgp0sAcz3nJNH/jU+c198uj3Dg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: HfO04rMDa/Pmdskqz+eEs9BDi0sRQ1cnGnJIAwz2TdmG9ytD4fiC8DevMQX2OVO4aVfaGy+9O/Pg1gACxnF0AQ==
-length: 2948
+edSignature: 1Kv5A4K372TiZEAh4EhKqbV2UqpWjWDo6OGfCsq44F+aWUHM5N6ggcVs08l2t0ZdRYt0CkQyop1yeTkFK6MLCQ==
+length: 3542
 -->
