@@ -4,44 +4,42 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.15</title>
-            <pubDate>Fri, 23 Oct 2026 08:53:45 -0600</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.15</link>
+            <title>1.0.16</title>
+            <pubDate>Fri, 23 Oct 2026 10:00:57 -0600</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.16</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>85</sparkle:version>
-            <sparkle:shortVersionString>1.0.15</sparkle:shortVersionString>
+            <sparkle:version>86</sparkle:version>
+            <sparkle:shortVersionString>1.0.16</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# macOS 1.0.15（85）
+            <description sparkle:format="markdown"><![CDATA[# macOS 1.0.16（86）
 
-适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
+适用于 Apple 芯片 Mac，macOS 14 或更新版本。
 
-## 自动识别 Clash 入口
+## 诊断日志导出修复
 
-选择「复用 Clash 当前出口」，点击「自动识别并核对出口」。助手会读取受支持的 Clash Verge 本机运行接口，核对进程身份、实际端口及 SOCKS5 协议，再检查当前出口。
+- 后台短暂写入日志时，导出会有限等待，减少“诊断日志未能导出”的偶发失败。持续失败仍会停止，不会反复重试。
+- 导出失败现在显示具体阶段及安全错误码，便于区分读取记录、保存位置、文件写入和权限问题；不显示连接凭据或私人路径。
+- 转发错误增加读取、写入、连接收尾及已有数据转交的记录，帮助判断影响。保留原始错误，不把成功请求后的错误记录直接算作断流次数。
 
-- 正常情况下无需查找或手填端口、IP、节点账号密码。
-- 若能明确识别系统当前使用的入口，会优先沿用；无法区分多个入口时列出选择，不随意猜测端口。
-- 已有固定出口继续使用原 IP 作比较，不会自动接受新的 IP。首次设置仍需本人确认检测结果，确认后再次检测才保存。
-- 检测前后会重新核对 Clash 进程、端口及选路状态；状态变化、出口不符、接口无法确认时停止保存，保留原连接。
-- 直连或自动切换节点不作为固定节点直接保存。手动填写保留在备用选项中。
+## 保留当前连接与保护
 
-识别过程不读取订阅或节点配置文件，不索取节点密码，不修改 Clash 节点、规则、模式、TUN 或断网保护，也不自动创建新的 Clash 监听入口。
+保留 1.0.15 的 Clash 自动识别功能。此次更新不改变 Clash 节点、规则、模式、TUN、原固定出口或断网保护，不需要重新填写端口、换 IP、清理数据或重新兑换卡密。
 
-## 使用与范围
+更新前保存工作并正常退出受保护应用，按助手和 macOS 提示完成主程序及保护组件更新。升级后可导出一次诊断日志；若仍失败，请保留显示的阶段与错误码，无需反复修复配置。
 
-更新前保存工作并正常退出受保护应用，按助手提示完成组件更新。更新不会自动切换已保存线路；请继续保留原 IP 和保护。
+## 已验证范围
 
-规则模式下，各应用可能采用不同路线。两个检测来源一致，只证明本次检查的出口；固定节点入口、应用真实路线和长期稳定性仍需核验。此功能不是账号服务端 IP 白名单，也不保证对远端出口变化即时阻断。
+通过 Debug／Release 各 346 项核心检查、针对性的日志竞争与转发错误检查、Apple 签名公证及 1.0.15 → 1.0.16 隔离升级验证。Windows 本次不变。
 
-已通过 Debug／Release 各 340 项核心检查、实际本机只读识别与状态复核、独立 Mihomo 模式检查、Apple 签名公证及 1.0.14 → 1.0.15 隔离升级。Windows 本次不变。异常时请保留现场并导出诊断日志，不要反复重装、换 IP 或关闭保护。
+本版修复日志导出并改善诊断，不宣称已解决所有 DNS 超时或断流。客户的实际应用访问、持续连接、异常阻断和恢复仍需在原设备核验。规则分流下，查 IP 服务的结果不代表所有应用都走同一出口。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.15/CEGR-AI-Assistant-v1.0.15-for-macOS-arm64.zip" length="5144905" type="application/octet-stream" sparkle:edSignature="ZdFC3IFpw+97sA6ugiceEKxC56PqT/Es3PF6doJrPdulBUEOu/I7ICdPUEWW0/oGJQ7RpLlCl/NLEIZHIiXcBA=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.16/CEGR-AI-Assistant-v1.0.16-for-macOS-arm64.zip" length="5161327" type="application/octet-stream" sparkle:edSignature="BNFj5LYFwcswyUXrMdWulRXr3QmYBdlnBuz/E+n9XHG9ul7LDYT8TG/FRq5nP8y84oYpg/cnKfYJSWpK7YjhDg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: WXD2EFMQZXNmyoltwVdkkcKartKZcGLNL499MhzKeopsmIWkckdAdhoM2jPe3ac798CLlz9+kFstmCp7VTK4Dg==
-length: 3437
+edSignature: WVOJZKIBYalKXG2UVGdkD5GoEXjz3tAuMAcwL9jQxafsvUjs95keXp8lgNCYkuxDnXV79wOXej7agvjrghYGBA==
+length: 3093
 -->
