@@ -4,42 +4,42 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.16</title>
-            <pubDate>Fri, 23 Oct 2026 10:00:57 -0600</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.16</link>
+            <title>1.0.17</title>
+            <pubDate>Fri, 23 Oct 2026 10:45:36 -0600</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.17</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>86</sparkle:version>
-            <sparkle:shortVersionString>1.0.16</sparkle:shortVersionString>
+            <sparkle:version>87</sparkle:version>
+            <sparkle:shortVersionString>1.0.17</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[# macOS 1.0.16（86）
+            <description sparkle:format="markdown"><![CDATA[# macOS 1.0.17（87）
 
 适用于 Apple 芯片 Mac，macOS 14 或更新版本。
 
-## 诊断日志导出修复
+## 本次更新
 
-- 后台短暂写入日志时，导出会有限等待，减少“诊断日志未能导出”的偶发失败。持续失败仍会停止，不会反复重试。
-- 导出失败现在显示具体阶段及安全错误码，便于区分读取记录、保存位置、文件写入和权限问题；不显示连接凭据或私人路径。
-- 转发错误增加读取、写入、连接收尾及已有数据转交的记录，帮助判断影响。保留原始错误，不把成功请求后的错误记录直接算作断流次数。
+- 修复部分连接结束时，剩余数据可能被提前中断的问题。
+- 改进相关日志分类，保留原始错误信息，便于继续排查；不把收尾提示直接当成请求失败或成功。
+- 继续保留日志导出修复、Clash 端口自动识别和固定出口核对。
 
-## 保留当前连接与保护
+## 更新方法
 
-保留 1.0.15 的 Clash 自动识别功能。此次更新不改变 Clash 节点、规则、模式、TUN、原固定出口或断网保护，不需要重新填写端口、换 IP、清理数据或重新兑换卡密。
+在「软件更新」中再次检查。更新前保存工作，按助手与 macOS 提示完成主程序和保护组件更新。已有账号、连接和偏好继续沿用，无需重新填写连接、兑换卡密或清理数据。
 
-更新前保存工作并正常退出受保护应用，按助手和 macOS 提示完成主程序及保护组件更新。升级后可导出一次诊断日志；若仍失败，请保留显示的阶段与错误码，无需反复修复配置。
+本次更新不更改原 IP、Clash 节点或模式、DNS、TUN 和断网保护，不增加直连回退。Windows 本次不变。
 
-## 已验证范围
+## 验证与限制
 
-通过 Debug／Release 各 346 项核心检查、针对性的日志竞争与转发错误检查、Apple 签名公证及 1.0.15 → 1.0.16 隔离升级验证。Windows 本次不变。
+安装包已通过签名、Apple 公证及 1.0.16 → 1.0.17 隔离升级检查。修复已通过针对性验证；本版在客户原设备上的实际应用、持续连接和异常阻断恢复仍需复测，不宣称所有 DNS 超时或断流均已解决。规则分流下，查 IP 服务的结果不能代表所有应用的实际出口。
 
-本版修复日志导出并改善诊断，不宣称已解决所有 DNS 超时或断流。客户的实际应用访问、持续连接、异常阻断和恢复仍需在原设备核验。规则分流下，查 IP 服务的结果不代表所有应用都走同一出口。
+遇到异常，请从「本机状态 → 导出诊断日志」保存日志，附版本、发生时间和具体现象，通过原支持渠道反馈。无需反复修复配置，请勿公开密码、卡密、令牌或聊天内容。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.16/CEGR-AI-Assistant-v1.0.16-for-macOS-arm64.zip" length="5161327" type="application/octet-stream" sparkle:edSignature="BNFj5LYFwcswyUXrMdWulRXr3QmYBdlnBuz/E+n9XHG9ul7LDYT8TG/FRq5nP8y84oYpg/cnKfYJSWpK7YjhDg=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.17/CEGR-AI-Assistant-v1.0.17-for-macOS-arm64.zip" length="5168000" type="application/octet-stream" sparkle:edSignature="JIG4tIctNedR55WFGnY6nv+w1cAd4HYU87zHQdhbMy7klSJzl2Zz5phe24aq+HphGJpum4edO8/3H+DcFUx4BQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: WVOJZKIBYalKXG2UVGdkD5GoEXjz3tAuMAcwL9jQxafsvUjs95keXp8lgNCYkuxDnXV79wOXej7agvjrghYGBA==
-length: 3093
+edSignature: 9qrD3/lybQk9gwy5XDVpnOxYhNkWdNp7Fmej7T7L3jizNf74nl5STml0B+Cd2/x/BJZUO2Dm6tQE8ByMORibDA==
+length: 2872
 -->
