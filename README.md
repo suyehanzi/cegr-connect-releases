@@ -2,9 +2,9 @@
 
 ## Mac 下载
 
-当前版本：**1.0.18**，适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
+当前版本：**1.0.19**，适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
 
-[下载 Mac 安装包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.18/CEGR-AI-Assistant-v1.0.18-for-macOS-arm64.zip) · [更新说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.18)
+[下载 Mac 安装包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.19/CEGR-AI-Assistant-v1.0.19-for-macOS-arm64.zip) · [更新说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.19)
 
 请下载上方的安装包，GitHub 的 Source code 不是安装包。
 
@@ -12,7 +12,7 @@
 
 已安装客户可在助手的“软件更新”中检查更新。更新前保存正在使用的浏览器、Claude 桌面端与 Claude Code 工作；原固定出口、连接配置和断网保护保留。若系统提示更新保护组件，请按提示完成授权，无需反复填写端口或重建连接。
 
-日常使用：打开助手查看连接状态，再使用常用应用即可。首页分别提供浏览器、客户端和 CLI 固定出口入口，详细诊断按需展开。出现问题可导出日志交给支持人员，日志不会自动上传。
+日常使用：打开助手查看连接状态，再使用常用应用即可。首页分别提供浏览器、客户端和 CLI 固定出口入口；点击进入各自独立页面，顶部可返回首页，详细诊断按需展开。出现问题可导出日志交给支持人员，日志不会自动上传。
 
 首次使用需要完成激活、确认连接和应用范围。已有 Clash 时可自动发现本地入口，再由本人确认要保留的出口 IP；规则模式下仍需核对目标应用的实际路由。
 

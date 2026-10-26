@@ -4,33 +4,33 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.18</title>
-            <pubDate>Mon, 26 Oct 2026 01:02:22 -0600</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.18</link>
+            <title>1.0.19</title>
+            <pubDate>Mon, 26 Oct 2026 05:40:29 -0600</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.19</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>90</sparkle:version>
-            <sparkle:shortVersionString>1.0.18</sparkle:shortVersionString>
+            <sparkle:version>91</sparkle:version>
+            <sparkle:shortVersionString>1.0.19</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## 1.0.18 · 日常使用更简单
+            <description sparkle:format="markdown"><![CDATA[## 1.0.19 · 三个入口，各自一个页面
 
-- 已配置的客户打开助手即可查看当前连接和保护状态，详细检查按需展开，减少重复配置提示。
-- 浏览器、Claude 桌面端、Claude Code 分别提供固定出口入口，沿用已确认的连接和保护。
-- 增加 Claude 相关浏览器站点的独立清理入口；真正清理前须核对范围并确认，保留书签、密码和下载文件。
-- 提供主动选择的“英文＋美西时区”选项。安装更新不会自动改变语言、时区或清理数据；系统授权仍由本人完成。
-- 改善语言切换的取消、恢复和错误提示；自动检查不会清掉失败信息。
-- 补齐正在检查、导出和更新等状态的动效，并遵循减少动态效果设置。
+- 点击“浏览器固定出口”“客户端固定出口”或“CLI 固定出口”，直接进入各自独立页面。
+- 页面顶部可返回首页，也支持侧栏导航和 Esc 返回；只显示该类应用的设置与检查。
+- 处理配置时留在当前页面，减少窗口来回切换；保留检查中的动效与明确错误提示。
+- 修正语言设置等待期间可能混入旧成功提示的问题。
 
-适用于 Apple Silicon Mac，macOS 14 或更新版本。升级会短暂重启 CEGR 后台，请先保存受保护应用中的工作。原固定出口、代理和断网保护配置保留。
+沿用原固定出口、代理、应用范围与断网保护。更新不会自动修改语言或时区，不会清理浏览器数据，也无需重复配置连接。
 
-连接与设置状态不等于真实应用或断网恢复验收；首次使用或更换线路后仍需核对实际访问。出现问题请导出诊断日志，保留当前配置。
+适用于 Apple Silicon Mac，macOS 14 或更新版本。安装更新会短暂重启 CEGR 后台，请先保存受保护应用中的工作。
+
+本次验证覆盖页面导航、状态轮询、回归检查、签名公证及隔离升级。真实应用、持续连接与异常阻断恢复仍需按设备核对，页面状态不代替这些验收。出现问题请导出诊断日志，保留当前配置。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.18/CEGR-AI-Assistant-v1.0.18-for-macOS-arm64.zip" length="5363609" type="application/octet-stream" sparkle:edSignature="ZvEl8wqrSUnDVMrPAYLOEPJbLCkpcw+XCjpuPyxR99woEoN7CUIgn3lF9OJ1xFgRzGfn7yTFkN8mr4k5XMVmBw=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.19/CEGR-AI-Assistant-v1.0.19-for-macOS-arm64.zip" length="5373733" type="application/octet-stream" sparkle:edSignature="Rctcmrcid252POkwFaZ8i59zclnuIEG8QWF6Gcua2NpiNbx8Qark8gYURhlHS9DXnY1EV1uIlaMSKZ6t4UIfDg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: i7AEcq76mPADWuS8RX0SFGPkwmjyn7F6+plKepyyP9FzhAENTLtehsZDM96faarUIeCNREaJ/XZWXH6PUbVZDQ==
-length: 2650
+edSignature: Js9j5ovIc9ibvSturgAg3JeKxu/abhjck2TigzpgQv/pZM3bfzlGhvbdaKzePm6taL2tmahaAmko2nBYaghkDw==
+length: 2547
 -->
