@@ -4,33 +4,33 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.19</title>
-            <pubDate>Mon, 26 Oct 2026 05:40:29 -0600</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.19</link>
+            <title>1.0.20</title>
+            <pubDate>Wed, 28 Oct 2026 03:34:48 -0600</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.20</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>91</sparkle:version>
-            <sparkle:shortVersionString>1.0.19</sparkle:shortVersionString>
+            <sparkle:version>92</sparkle:version>
+            <sparkle:shortVersionString>1.0.20</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## 1.0.19 · 三个入口，各自一个页面
+            <description sparkle:format="markdown"><![CDATA[## 1.0.20 · 修复 Mac Edge 代理配置
 
-- 点击“浏览器固定出口”“客户端固定出口”或“CLI 固定出口”，直接进入各自独立页面。
-- 页面顶部可返回首页，也支持侧栏导航和 Esc 返回；只显示该类应用的设置与检查。
-- 处理配置时留在当前页面，减少窗口来回切换；保留检查中的动效与明确错误提示。
-- 修正语言设置等待期间可能混入旧成功提示的问题。
+- 修复 Edge 中“代理连接失败”，而助手仍显示设置匹配的问题。
+- 修正 Edge 策略的生成、读取与冲突检查，保留原应用保护标识。
+- 已配置 Edge 的客户可通过一次配置更新，纠正原 CEGR 描述文件。原代理、端口、固定出口和其他应用设置保留。
+- 改善语言设置待完成时的 DNS 提示，并优先显示连接故障。
 
-沿用原固定出口、代理、应用范围与断网保护。更新不会自动修改语言或时区，不会清理浏览器数据，也无需重复配置连接。
+**此前已配置 Edge 的客户：**更新后先保存并退出所选应用，在“浏览器固定出口”中准备安装文件，再到系统设备管理中确认安装，随后重开 Edge 检查实际访问。只更新助手不等于系统描述文件已经更新。已有组织策略或其他待完成切换时，按明确提示处理，不要重复重装。
 
-适用于 Apple Silicon Mac，macOS 14 或更新版本。安装更新会短暂重启 CEGR 后台，请先保存受保护应用中的工作。
+适用于 Apple Silicon Mac，macOS 14 或更新版本。更新前保存受保护应用中的工作。原 IP、Clash／TUN、应用范围和断网保护配置保留；不会自动清理浏览器或修改语言、时区。
 
-本次验证覆盖页面导航、状态轮询、回归检查、签名公证及隔离升级。真实应用、持续连接与异常阻断恢复仍需按设备核对，页面状态不代替这些验收。出现问题请导出诊断日志，保留当前配置。
+本包通过 Debug／Release 各 394 项回归、签名公证及隔离升级校验。客户系统中的策略安装、Edge 实际访问、持续连接和异常恢复仍需按设备核验，配置状态不替代这些实测。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.19/CEGR-AI-Assistant-v1.0.19-for-macOS-arm64.zip" length="5373733" type="application/octet-stream" sparkle:edSignature="Rctcmrcid252POkwFaZ8i59zclnuIEG8QWF6Gcua2NpiNbx8Qark8gYURhlHS9DXnY1EV1uIlaMSKZ6t4UIfDg=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.20/CEGR-AI-Assistant-v1.0.20-for-macOS-arm64.zip" length="5406181" type="application/octet-stream" sparkle:edSignature="d67bdbhoYG0re3O7LZBrhWYoVHAWvgIdGnlkcb29AyKOIzPeoqzjp2A9VxAat9IhgQhQ935d2HXEHbgvHt9DBA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: Js9j5ovIc9ibvSturgAg3JeKxu/abhjck2TigzpgQv/pZM3bfzlGhvbdaKzePm6taL2tmahaAmko2nBYaghkDw==
-length: 2547
+edSignature: zT8zjEaDiI52k+twbIXtRIX91N/fpqUXowomiz++c/wE+RGO56QkSudRvk28wTE8hJsczbAo+VhNxyN1aiyIBg==
+length: 2769
 -->
