@@ -4,30 +4,31 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.23</title>
-            <pubDate>Thu, 29 Oct 2026 02:32:51 -0600</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.23</link>
+            <title>1.0.24</title>
+            <pubDate>Thu, 29 Oct 2026 03:24:39 -0600</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.24</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>95</sparkle:version>
-            <sparkle:shortVersionString>1.0.23</sparkle:shortVersionString>
+            <sparkle:version>96</sparkle:version>
+            <sparkle:shortVersionString>1.0.24</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## 1.0.23 · 一键打开受保护的 Claude Code
+            <description sparkle:format="markdown"><![CDATA[## 1.0.24 · 改善连接重检与暂停恢复
 
-- 在“CLI 固定出口”页面点击“打开 Claude Code”，直接交给 macOS 终端启动，无需复制粘贴命令。
-- 可选择“在项目文件夹打开…”，从指定项目开始使用；原有“复制受保护启动命令”继续保留。
-- 启动前核对原连接、CLI 设置、原生程序签名和保护状态；始终使用本次安装的 CEGR 启动器。
+- 仅在能确认专用连接绑定的物理路径未变、原核验仍有效时，合并无关的全局网络通知，减少重复暂停。
+- 已进入重检时，相同物理路径的重复通知不再反复作废正在进行的核验；真实路径变化、授权失效和保护失效仍会阻断。
+- 修复暂停等待也消耗握手时间的问题；等待与实际连接计时分开，原有效期和请求总时限仍然生效。
+- 将单次检测连接等待从 8 秒调整到 15 秒，总检测时限保持 18 秒，认证和证书错误不会降级重试。
 
-不会修改原固定出口、代理、系统保护或终端配置。连接或保护未就绪时不启动，不使用未受保护的备用入口。终端已打开不等于实际联网已验收，请查看终端中的提示。
+已有正常配置无需重新填写节点或重装描述文件。更新前保存工作并退出受保护应用；如提示更新保护组件，完成同版本组件更新即可。原固定出口、应用范围和断网保护保留。
 
-更新前保存受保护应用的工作。已有正常连接无需重新配置；如系统提示更新保护组件，按提示完成即可。
+本版针对已复现的软件问题修复；网络供应商故障、设备网络变化或账号服务故障仍需按实际错误排查。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.23/CEGR-AI-Assistant-v1.0.23-for-macOS-arm64.zip" length="5545723" type="application/octet-stream" sparkle:edSignature="BH1PvO+Y1e/sZypWfdTbsHZ8f359qGpDPPdWrNC36+cZ9mEpT/15SajS6ElQl7iCXjtnGN0df3hcZ1E8ASVgAg=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.24/CEGR-AI-Assistant-v1.0.24-for-macOS-arm64.zip" length="5582490" type="application/octet-stream" sparkle:edSignature="BMD7xaJOeSYgLTPBSZFfT01Hup/PHt/WmVbb4ESZfGFxj+/2k6u45cHwnWj/ryB4yIoEslsyVw1mhB3TPMnPCg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: YhmaXy1Ola1aTU3tl2frZlAYzkOSWdMGf7Qv2UKb6yOQRn7rvl5TWRMRjqM4VQw6p621qb/0jG77yq4ckXoaCA==
-length: 2311
+edSignature: TBB6ixD+vrEQy8b4VSFRa02CzamG9OOh8++RbBFIDq8vKAH3Eb0F6YHXawgptmJdcIJwPNgU/LftVicX1TjiAQ==
+length: 2499
 -->
