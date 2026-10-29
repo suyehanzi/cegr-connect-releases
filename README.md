@@ -2,17 +2,19 @@
 
 ## Mac 下载
 
-当前版本：**1.0.20**，适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
+当前版本：**1.0.21**，适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
 
-[下载 Mac 安装包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.20/CEGR-AI-Assistant-v1.0.20-for-macOS-arm64.zip) · [更新说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.20)
+[下载 Mac 安装包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.21/CEGR-AI-Assistant-v1.0.21-for-macOS-arm64.zip) · [更新说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.21)
 
 请下载上方的安装包，GitHub 的 Source code 不是安装包。
+
+本次改善短暂握手重置和连续网络通知后的恢复。核验期间暂停转发，仍须取得最新出口证明才能恢复；原核验有效期、固定出口和断网保护保留。已有正常配置无需重复填写。
 
 新客户：下载并解压，将助手拖入“应用程序”后打开，再按引导激活、确认连接和所需应用。系统密码只在 macOS 的授权窗口中填写。
 
 已安装客户可在助手的“软件更新”中检查更新。更新前保存正在使用的浏览器、Claude 桌面端与 Claude Code 工作；原固定出口、连接配置和断网保护保留。若系统提示更新保护组件，请按提示完成授权，无需反复填写端口或重建连接。
 
-此前已配置 Edge 的客户：更新后先保存并退出所选应用，在“浏览器固定出口”中准备安装文件，再到系统设备管理确认安装，随后重开 Edge 核验。只更新助手不会自动完成描述文件安装；原代理、固定出口及其他应用设置保留。
+从 1.0.19 或更早版本升级且曾配置 Edge 的客户：更新后先保存并退出所选应用，在“浏览器固定出口”中准备安装文件，再到系统设备管理确认安装，随后重开 Edge 核验。只更新助手不会自动完成描述文件安装；原代理、固定出口及其他应用设置保留。
 
 日常使用：打开助手查看连接状态，再使用常用应用即可。首页分别提供浏览器、客户端和 CLI 固定出口入口；点击进入各自独立页面，顶部可返回首页，详细诊断按需展开。出现问题可导出日志交给支持人员，日志不会自动上传。
 
