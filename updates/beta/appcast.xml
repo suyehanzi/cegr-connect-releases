@@ -4,30 +4,34 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.21</title>
-            <pubDate>Thu, 29 Oct 2026 01:46:56 -0600</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.21</link>
+            <title>1.0.22</title>
+            <pubDate>Thu, 29 Oct 2026 02:14:13 -0600</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.22</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>93</sparkle:version>
-            <sparkle:shortVersionString>1.0.21</sparkle:shortVersionString>
+            <sparkle:version>94</sparkle:version>
+            <sparkle:shortVersionString>1.0.22</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## 1.0.21 · 改善短暂抖动后的连接恢复
+            <description sparkle:format="markdown"><![CDATA[## 1.0.22 · 自动识别协议与断网保护测试
 
-- 对可确认的代理握手连接重置进行有限复核，减少一次检测失败导致其他连接同时中断。
-- 连续网络变化通知合并处理；旧检测结果不能重新放行，必须按最新网络状态完成核验。
-- 复核期间暂停数据转发，在原有核验有效期内尽量保留连接；到期、出口不符或授权失效仍关闭通路。
+- 四段代理资料可自动识别 HTTPS、HTTP 或 SOCKS5，并完成双来源出口核对；识别成功后固定使用选定协议。带协议的链接继续按原协议处理。
+- 新增“测试断网保护”向导：确认保存工作后暂停 CEGR 专用转发，逐应用记录实际阻断与恢复结果，并尝试恢复原连接。未测试的项目不会自动标记通过。
+- 连接超时显示发生阶段，区分本机检测入口、上游连接、代理握手和检测响应。
 
-保留原固定出口、连接资料、应用范围和断网保护，无需重新填写代理或安装描述文件。更新前保存并正常退出受保护应用；如系统提示更新保护组件，按提示完成即可。
+自动识别仅在主动点击后运行，可能使用未加密认证时仍须本人确认。证书和认证失败不自动降级，检测出口不符时不接受新 IP。
 
-本次回归和隔离连接测试不替代客户实际线路验收。上游持续不可达时仍会保护性断开，不自动切换出口或直连。
+断网测试保持系统过滤器、Clash、Wi-Fi 和原配置。两分钟后自动尝试恢复；恢复失败时继续保留保护并显示指引。测试会中断所选应用当前的网络请求，请先保存工作。
+
+更新前保存受保护应用的工作。已有连接无需重复配置；如果系统要求更新保护组件，请按提示完成。
+
+线路本身持续不可达时仍会报错，不自动换出口或直连。客户实际网络、应用使用与异常恢复仍需分别核对。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.21/CEGR-AI-Assistant-v1.0.21-for-macOS-arm64.zip" length="5407135" type="application/octet-stream" sparkle:edSignature="1KY7U908aMRQ4dSvCs+sTKwujhJ2o3C1xLhQ8sPPugthGO6fV1t+/fpZl1vvHjquYryfTSqEoAIvykmKF2SVCg=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.22/CEGR-AI-Assistant-v1.0.22-for-macOS-arm64.zip" length="5523225" type="application/octet-stream" sparkle:edSignature="MYh37zVekh+uOjpqKeHjgS+Ofra30KICL9XeXWKeZDOjHlrecXHwEuv1K4FEuZObV31uyc5O83SwWgFDi+gKDg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: FK9OxuGVCGgnwX8K/k68XfZ4X4qok08RNoU515OKDodIhwjJUsC6ljwByW8W9RTwBiMFgLbzyy2rO1LZH7piAw==
-length: 2314
+edSignature: fuubCnmycN1l3km9F7CAwZgu8pM6BbnpNUlsHy7sO/nXPxkHGmuunbyiAF1ejz/E33VIiY4rypfoYv0gPav+Bg==
+length: 2737
 -->

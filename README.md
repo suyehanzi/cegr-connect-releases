@@ -2,13 +2,18 @@
 
 ## Mac 下载
 
-当前版本：**1.0.21**，适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
+当前版本：**1.0.22**，适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
 
-[下载 Mac 安装包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.21/CEGR-AI-Assistant-v1.0.21-for-macOS-arm64.zip) · [更新说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.21)
+[下载 Mac 安装包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.22/CEGR-AI-Assistant-v1.0.22-for-macOS-arm64.zip) · [更新说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.22)
 
 请下载上方的安装包，GitHub 的 Source code 不是安装包。
 
 本次改善短暂握手重置和连续网络通知后的恢复。核验期间暂停转发，仍须取得最新出口证明才能恢复；原核验有效期、固定出口和断网保护保留。已有正常配置无需重复填写。
+
+四段代理资料现在可选择“自动识别 HTTPS／HTTP／SOCKS5”，本人确认后检测并核对固定出口。带协议的链接仍按原协议处理，已保存的正常连接无需重新配置。
+
+“本机状态”新增“测试断网保护”按钮：先保存工作，再暂停专用转发、逐应用确认实际结果并恢复原连接。Wi-Fi、Clash 与系统保护保持。两分钟后自动尝试恢复；无法确认或未测试的项目不会自动显示通过。
+
 
 新客户：下载并解压，将助手拖入“应用程序”后打开，再按引导激活、确认连接和所需应用。系统密码只在 macOS 的授权窗口中填写。
 
