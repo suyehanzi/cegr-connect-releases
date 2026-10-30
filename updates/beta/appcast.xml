@@ -4,30 +4,33 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>橙格 · AI 环境助手</title>
         <item>
-            <title>1.0.25</title>
-            <pubDate>Fri, 30 Oct 2026 02:29:54 -0600</pubDate>
-            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.25</link>
+            <title>1.0.26</title>
+            <pubDate>Fri, 30 Oct 2026 06:08:19 -0600</pubDate>
+            <link>https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.26</link>
             <sparkle:informationalUpdate>
                 <sparkle:belowVersion>56</sparkle:belowVersion>
             </sparkle:informationalUpdate>
-            <sparkle:version>97</sparkle:version>
-            <sparkle:shortVersionString>1.0.25</sparkle:shortVersionString>
+            <sparkle:version>98</sparkle:version>
+            <sparkle:shortVersionString>1.0.26</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## 1.0.25 · 连接恢复改进
+            <description sparkle:format="markdown"><![CDATA[## 1.0.26 · Clash 原节点隔离
 
-- 临时连接故障后，保持较短的自动重试间隔，减少进入保护阻断后的额外等待。
-- 旧出口核验到期时，保留正在进行的新核验。旧通路仍按时关闭，重新确认原固定出口并通过保护检查后才恢复连接。
-- 保留原 IP、代理、Clash、DNS 和断网保护设置，已有配置无需重新填写。
+- 在「复用 Clash 当前出口」中增加「独立保留原节点」。先核对当前实际出口，再确认保存独立线路；已有连接不会因为升级自动迁移。
+- 独立线路保留原节点和所需的固定前置参数，不跟随源 Clash 后续的订阅、规则模式或全局节点选择。原节点不可用时阻断，不转用备用节点。
+- CEGR 保存的节点副本留在本机钥匙串，运行参数经本机匿名管道传递，不上传给 CEGR。
+- 需要受支持的 Clash Verge 本机接口、Mihomo 1.19.32 或更新版本及可确认的节点配置；不支持或有歧义时会停止，不静默降级。
 
-适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。更新前请保存浏览器、Claude 桌面端与 Claude Code 中的工作；若系统提示更新保护组件，按提示完成即可。
+注意：独立线路可能在 Clash 主程序退出后继续运行。本版并非“退出 Clash 即让 Claude 全部断网”的模式。供应商自行更换公网出口仍需通过出口核验发现，不保证零检测窗口。
 
-本次修复重试与核验恢复逻辑。特定线路的初始建连超时仍需继续验证；上游不可用时，断网保护会保持阻断，不会改用其他出口。
+客户真实订阅、应用持续连接及异常恢复仍需实机验收，不能把版本更新视为所有断流问题已解决。
+
+适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。升级前保存浏览器、Claude 桌面端和 Claude Code 的工作；若系统提示更新保护组件，按提示完成。原 IP、已有应用配置和断网保护保留，Windows 更新源不变。
 ]]></description>
-            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.25/CEGR-AI-Assistant-v1.0.25-for-macOS-arm64.zip" length="5581881" type="application/octet-stream" sparkle:edSignature="Mk3Ihn8K7yX2Nokmwy0oOWgXjCl7oyj9IHGoe9nIXxvw1fjEJZhY95OpFFFDZd2qotgEQc0X/XerTgEWZVCuCg=="></enclosure>
+            <enclosure url="https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.26/CEGR-AI-Assistant-v1.0.26-for-macOS-arm64.zip" length="6225793" type="application/octet-stream" sparkle:edSignature="BW68fWrlTz0JY4pVKJSnQTZfipXpZVB3pByElhvgqBYVNgX1xKWSJsut2nO0o0q5aaPOeLlDhNwmjAOiNrhYBw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: JklpvXKIED9AAhar3XQLwOw/0bkVXX6qDxCGn8ppdkN2swOlLntU/6B/XO7pjTkva5ML2IKevGrL1hDZHH16CQ==
-length: 2287
+edSignature: 39GrtLpsc0fqcroqDJLQHFFvHoSz+u0m2VqH/T1yMFU1QpgRB01n/58zkrPiUt3sDL7fAPPdxz4Cg4Q22CdjDw==
+length: 2833
 -->

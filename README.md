@@ -2,13 +2,17 @@
 
 ## Mac 下载
 
-当前版本：**1.0.25**，适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
+当前版本：**1.0.26**，适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
 
-[下载 Mac 安装包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.25/CEGR-AI-Assistant-v1.0.25-for-macOS-arm64.zip) · [更新说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.25)
+[下载 Mac 安装包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.26/CEGR-AI-Assistant-v1.0.26-for-macOS-arm64.zip) · [更新说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.26)
 
 请下载上方的安装包，GitHub 的 Source code 不是安装包。
 
-本次改善临时连接故障后的恢复：阻断后保持较短的自动重试间隔；旧出口核验到期时不再取消正在进行的新核验。旧通路仍按时关闭，重新确认原固定出口并通过保护检查后才恢复。原 IP、代理、Clash、DNS 和断网保护设置保留，已有正常配置无需重新填写。特定线路的初始建连超时仍需继续验证。
+新增「独立保留原节点」：在「复用 Clash 当前出口」中，先自动识别并核对原出口，确认后保存独立线路。源 Clash 更换订阅、规则模式或全局节点不会覆盖这份线路；原节点不可用时保持阻断，不转用备用节点。已有连接不会因为升级自动迁移。
+
+此功能需要受支持的 Clash Verge 本机接口及 Mihomo 1.19.32 或更新版本。节点副本保存在本机钥匙串，不上传给 CEGR；不支持的配置会明确停止。
+
+独立线路可能在 Clash 主程序退出后继续运行，本版并非「退出 Clash 即让 Claude 全部断网」的模式。供应商自行改变公网出口仍需核验发现，客户实机持续连接和异常恢复仍待验收。
 
 四段代理资料现在可选择“自动识别 HTTPS／HTTP／SOCKS5”，本人确认后检测并核对固定出口。带协议的链接仍按原协议处理，已保存的正常连接无需重新配置。
 
