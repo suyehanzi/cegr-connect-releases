@@ -2,13 +2,13 @@
 
 ## Mac 下载
 
-当前版本：**1.0.24**，适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
+当前版本：**1.0.25**，适用于 Apple Silicon（M 系列）Mac，macOS 14 或更新版本。
 
-[下载 Mac 安装包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.24/CEGR-AI-Assistant-v1.0.24-for-macOS-arm64.zip) · [更新说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.24)
+[下载 Mac 安装包](https://github.com/suyehanzi/cegr-connect-releases/releases/download/v1.0.25/CEGR-AI-Assistant-v1.0.25-for-macOS-arm64.zip) · [更新说明](https://github.com/suyehanzi/cegr-connect-releases/releases/tag/v1.0.25)
 
 请下载上方的安装包，GitHub 的 Source code 不是安装包。
 
-本次修复重复网络通知引起的反复暂停，以及等待保护核验被误计为握手超时的问题。只有确认原绑定物理路径未变、原出口核验仍有效时，才在后台复核；真实路径变化、出口不符或保护失效仍会阻断。原固定出口、核验有效期与断网保护保留，已有正常配置无需重复填写。
+本次改善临时连接故障后的恢复：阻断后保持较短的自动重试间隔；旧出口核验到期时不再取消正在进行的新核验。旧通路仍按时关闭，重新确认原固定出口并通过保护检查后才恢复。原 IP、代理、Clash、DNS 和断网保护设置保留，已有正常配置无需重新填写。特定线路的初始建连超时仍需继续验证。
 
 四段代理资料现在可选择“自动识别 HTTPS／HTTP／SOCKS5”，本人确认后检测并核对固定出口。带协议的链接仍按原协议处理，已保存的正常连接无需重新配置。
 
